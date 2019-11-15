@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const pkg = require('./index.js')
+const cau = require('./src/index')
 
 const printBreak = () => console.log('\n')
 
@@ -19,8 +19,8 @@ module.exports = {
     printBreak()
   },
   context: {
+    cau,
     lo: _,
-    ...pkg,
   },
   enableAwait: true,
   prompt: () => `repl $ `,

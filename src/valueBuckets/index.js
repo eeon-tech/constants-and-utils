@@ -4,39 +4,66 @@
  */
 const formatNumbers = require('../formatNumbers')
 
-const createPercentageValueBucket = (value) => ({
-  label: formatNumbers.formatNumberNicely(value, {
+const createPercentageValueBucket = (value, label) => ({
+  formattedValue: formatNumbers.formatNumberNicely(value, {
     percentage: true,
     mantissa: 2,
   }),
+  label,
   value,
 })
 exports.createPercentageValueBucket = createPercentageValueBucket
 
-const createNumericValueBucket = (value, overrides = {}) => ({
-  label: formatNumbers.formatNumberNicely(value, {
+const createNumericValueBucket = (
+  value,
+  label,
+  priceValueBucketsOverrides = {}
+) => ({
+  formattedValue: formatNumbers.formatNumberNicely(value, {
     average: true,
-    ...overrides,
+    ...priceValueBucketsOverrides,
   }),
+  label,
   value,
 })
 exports.createNumericValueBucket = createNumericValueBucket
 
+exports.betaValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(0.5, 'Less volatile than market'),
+  createNumericValueBucket(1, 'Moves with Market'),
+  createNumericValueBucket(1.5, 'More volatile than market'),
+  createNumericValueBucket(2),
+]
+
+exports.dividendYieldValueBuckets = [
+  createPercentageValueBucket(0, 'No Dividend'),
+  createPercentageValueBucket(0.01),
+  createPercentageValueBucket(0.02),
+  createPercentageValueBucket(0.03, 'Pretty good'),
+  createPercentageValueBucket(0.04),
+  createPercentageValueBucket(0.05),
+  createPercentageValueBucket(0.06),
+  createPercentageValueBucket(0.07),
+  createPercentageValueBucket(0.08),
+]
+
 exports.EBITDAValueBuckets = [
+  createNumericValueBucket(0, 'Profitable'),
   createNumericValueBucket(1000000),
   createNumericValueBucket(5000000),
-  createNumericValueBucket(10000000),
+  createNumericValueBucket(10000000, 'Small'),
   createNumericValueBucket(25000000),
   createNumericValueBucket(50000000),
-  createNumericValueBucket(100000000),
+  createNumericValueBucket(100000000, 'Midsized'),
   createNumericValueBucket(150000000),
   createNumericValueBucket(200000000),
   createNumericValueBucket(250000000),
   createNumericValueBucket(500000000),
   createNumericValueBucket(750000000),
-  createNumericValueBucket(1000000000),
+  createNumericValueBucket(1000000000, 'Large'),
   createNumericValueBucket(5000000000),
-  createNumericValueBucket(10000000000),
+  createNumericValueBucket(10000000000, 'Mega'),
   createNumericValueBucket(20000000000),
   createNumericValueBucket(50000000000),
   createNumericValueBucket(10000000000),
@@ -44,7 +71,41 @@ exports.EBITDAValueBuckets = [
   createNumericValueBucket(50000000000),
 ]
 
+const marketCapValueOverrides = { currency: true }
+exports.marketCapValueBuckets = [
+  createNumericValueBucket(50000000, 'Micro-cap', marketCapValueOverrides),
+  createNumericValueBucket(100000000, 'Tiny-cap', marketCapValueOverrides),
+  createNumericValueBucket(500000000, 'Small-cap', marketCapValueOverrides),
+  createNumericValueBucket(1000000000, marketCapValueOverrides),
+  createNumericValueBucket(5000000000, marketCapValueOverrides),
+  createNumericValueBucket(10000000000, 'Mid-cap', marketCapValueOverrides),
+  createNumericValueBucket(50000000000, marketCapValueOverrides),
+  createNumericValueBucket(100000000000, marketCapValueOverrides),
+  createNumericValueBucket(200000000000, 'Large-cap', marketCapValueOverrides),
+  createNumericValueBucket(500000000000, 'Mega-cap', marketCapValueOverrides),
+]
+
+exports.pegRatioValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(1, 'Fair value'),
+  createNumericValueBucket(2),
+  createNumericValueBucket(3),
+]
+
+exports.peRatioValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(5),
+  createNumericValueBucket(10),
+  createNumericValueBucket(15),
+  createNumericValueBucket(20),
+  createNumericValueBucket(25),
+  createNumericValueBucket(30),
+  createNumericValueBucket(35),
+  createNumericValueBucket(40),
+]
+
 exports.percentageValueBuckets = [
+  createPercentageValueBucket(0),
   createPercentageValueBucket(0.01),
   createPercentageValueBucket(0.02),
   createPercentageValueBucket(0.03),
@@ -61,49 +122,128 @@ exports.percentageValueBuckets = [
   createPercentageValueBucket(0.3),
 ]
 
-const overrides = { currency: true }
+const priceValueBucketsOverrides = { currency: true }
 exports.priceValueBuckets = [
-  createNumericValueBucket(10, overrides),
-  createNumericValueBucket(15, overrides),
-  createNumericValueBucket(20, overrides),
-  createNumericValueBucket(25, overrides),
-  createNumericValueBucket(30, overrides),
-  createNumericValueBucket(40, overrides),
-  createNumericValueBucket(50, overrides),
-  createNumericValueBucket(75, overrides),
-  createNumericValueBucket(100, overrides),
-  createNumericValueBucket(125, overrides),
-  createNumericValueBucket(150, overrides),
-  createNumericValueBucket(175, overrides),
-  createNumericValueBucket(200, overrides),
-  createNumericValueBucket(225, overrides),
-  createNumericValueBucket(250, overrides),
-  createNumericValueBucket(300, overrides),
-  createNumericValueBucket(350, overrides),
-  createNumericValueBucket(400, overrides),
-  createNumericValueBucket(450, overrides),
-  createNumericValueBucket(500, overrides),
-  createNumericValueBucket(550, overrides),
-  createNumericValueBucket(600, overrides),
-  createNumericValueBucket(650, overrides),
-  createNumericValueBucket(700, overrides),
-  createNumericValueBucket(750, overrides),
-  createNumericValueBucket(800, overrides),
-  createNumericValueBucket(850, overrides),
-  createNumericValueBucket(900, overrides),
-  createNumericValueBucket(950, overrides),
-  createNumericValueBucket(1000, overrides),
-  createNumericValueBucket(1250, overrides),
-  createNumericValueBucket(1500, overrides),
-  createNumericValueBucket(1750, overrides),
-  createNumericValueBucket(2000, overrides),
-  createNumericValueBucket(2500, overrides),
-  createNumericValueBucket(3000, overrides),
-  createNumericValueBucket(3500, overrides),
-  createNumericValueBucket(4000, overrides),
-  createNumericValueBucket(5000, overrides),
-  createNumericValueBucket(7500, overrides),
-  createNumericValueBucket(10000, overrides),
+  createNumericValueBucket(10, priceValueBucketsOverrides),
+  createNumericValueBucket(15, priceValueBucketsOverrides),
+  createNumericValueBucket(20, priceValueBucketsOverrides),
+  createNumericValueBucket(25, priceValueBucketsOverrides),
+  createNumericValueBucket(30, priceValueBucketsOverrides),
+  createNumericValueBucket(40, priceValueBucketsOverrides),
+  createNumericValueBucket(50, priceValueBucketsOverrides),
+  createNumericValueBucket(75, priceValueBucketsOverrides),
+  createNumericValueBucket(100, priceValueBucketsOverrides),
+  createNumericValueBucket(150, priceValueBucketsOverrides),
+  createNumericValueBucket(200, priceValueBucketsOverrides),
+  createNumericValueBucket(250, priceValueBucketsOverrides),
+  createNumericValueBucket(500, priceValueBucketsOverrides),
+  createNumericValueBucket(750, priceValueBucketsOverrides),
+  createNumericValueBucket(1000, priceValueBucketsOverrides),
+  createNumericValueBucket(2000, priceValueBucketsOverrides),
+]
+
+exports.priceToBookValueBuckets = [
+  createNumericValueBucket(1, 'Low'),
+  createNumericValueBucket(2),
+  createNumericValueBucket(3),
+  createNumericValueBucket(4),
+  createNumericValueBucket(5, 'High'),
+  createNumericValueBucket(6),
+  createNumericValueBucket(7),
+  createNumericValueBucket(8),
+  createNumericValueBucket(9),
+  createNumericValueBucket(10),
+]
+
+exports.profitMarginValueBuckets = [
+  createPercentageValueBucket(0),
+  createPercentageValueBucket(10),
+  createPercentageValueBucket(15),
+  createPercentageValueBucket(20),
+  createPercentageValueBucket(25),
+  createPercentageValueBucket(30),
+  createPercentageValueBucket(50),
+  createPercentageValueBucket(75, '🔥'),
+]
+
+const revenueValueBucketOverrides = { currency: true }
+exports.revenueValueBuckets = [
+  createNumericValueBucket(50000000, 'Small', revenueValueBucketOverrides),
+  createNumericValueBucket(100000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(250000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(500000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(1000000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(10000000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(25000000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(50000000000, null, revenueValueBucketOverrides),
+  createNumericValueBucket(100000000000, 'Mega', revenueValueBucketOverrides),
+]
+
+const revenuePerEmployeeValueBucketOverrides = { currency: true }
+exports.revenuePerEmployeeValueBuckets = [
+  createNumericValueBucket(
+    100000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    200000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    300000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    400000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    500000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    750000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+  createNumericValueBucket(
+    1000000,
+    null,
+    revenuePerEmployeeValueBucketOverrides
+  ),
+]
+
+const revenuePerShareValueBucketOverrides = { currency: true }
+exports.revenuePerShareValueBuckets = [
+  createNumericValueBucket(0, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(5, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(10, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(15, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(25, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(50, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(100, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(250, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(500, null, revenuePerShareValueBucketOverrides),
+  createNumericValueBucket(1000, null, revenuePerShareValueBucketOverrides),
+]
+
+exports.ttmEPSValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(5),
+  createNumericValueBucket(10),
+  createNumericValueBucket(15),
+  createNumericValueBucket(20),
+  createNumericValueBucket(25),
+  createNumericValueBucket(30),
+  createNumericValueBucket(35),
+  createNumericValueBucket(40),
+  createNumericValueBucket(45),
+  createNumericValueBucket(50),
 ]
 
 exports.volumeValueBuckets = [
@@ -112,5 +252,4 @@ exports.volumeValueBuckets = [
   createNumericValueBucket(1000000),
   createNumericValueBucket(5000000),
   createNumericValueBucket(10000000),
-  createNumericValueBucket(20000000),
 ]
