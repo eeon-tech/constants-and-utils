@@ -1,0 +1,71 @@
+{
+  "name": "@eeon/constants-and-utils",
+  "version": "0.0.1",
+  "description": "Shared Eeon Constants and Utilities",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eeon-tech/constants-and-utils"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "release": "semantic-release",
+    "repl": "local-repl",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [
+    "Eeon",
+    "JavaScript"
+  ],
+  "author": "Mitch Masia <mitch@eeon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/prompt": "^8.0.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.15",
+    "@semantic-release/github": "^5.4.0",
+    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/release-notes-generator": "^7.2.1",
+    "commitizen": "^3.1.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.7.0",
+    "jest": "^24.8.0",
+    "jest-config": "^24.8.0",
+    "lint-staged": "^8.2.1",
+    "local-repl": "^4.0.0",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.18"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "./node_modules/.bin/commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "./node_modules/.bin/lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "./node_modules/.bin/eslint --fix ./src",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
+  "dependencies": {
+    "keymirror": "^0.1.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "numbro": "^2.1.2"
+  },
+  "files": [
+    "src"
+  ]
+}
