@@ -26,10 +26,6 @@ This project is organized in a very _flat_ structure to enable simple discoverab
 
 There's nothing to run. Just write code and tests.
 
-### Building
-
-We use [Rollup](https://rollupjs.org/guide/en/)
-
 ### Committing
 
 This project uses [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) and as such, has specific committing guidelines. **Your commit will be rejected if you do not adhere to these guidelines.**
