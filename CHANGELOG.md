@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.1.0...v1.2.0) (2019-11-18)
+
+
+### Features
+
+* **jobs:** adds job management constants ([3d34137](https://github.com/eeon-tech/constants-and-utils/commit/3d3413712a5b1300ce3b91b711992627b5ed4149))
+
 # [1.1.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.0.0...v1.1.0) (2019-11-18)
 
 
