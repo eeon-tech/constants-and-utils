@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.0.0...v1.1.0) (2019-11-18)
+
+
+### Features
+
+* **cache:** adds more cache keys for expiration ([de2aa36](https://github.com/eeon-tech/constants-and-utils/commit/de2aa3695bc5e6ef0b9338eed173a84e7b755aed))
+
 # 1.0.0 (2019-11-18)
 
 
