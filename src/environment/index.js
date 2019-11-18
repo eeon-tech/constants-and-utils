@@ -19,6 +19,20 @@ exports.getCloudinaryAPISecret = (env = process.env) =>
 exports.getCloudinaryCloudName = (env = process.env) =>
   _.get(env, ['CLOUDINARY_CLOUD_NAME'])
 
+exports.getDatabaseHost = (env = process.env) =>
+  _.get(env, ['DATABASE_HOST'], 'localhost')
+
+exports.getDatabaseName = (env = process.env) =>
+  _.get(env, ['DATABASE_NAME'], 'test')
+
+exports.getDatabasePassword = (env = process.env) =>
+  _.get(env, ['DATABASE_PASSWORD'], 'password')
+
+exports.getDatabasePort = (env = process.env) =>
+  _.get(env, ['DATABASE_PORT'], '27017')
+;(exports.getDatabaseUsername = (env = process.env) => _),
+  get(env, ['DATABASE_USERNAME'], 'user')
+
 exports.getIEXPublishableToken = (env = process.env) =>
   isIEXSandbox(env)
     ? _.get(env, ['IEX_SANDBOX_PUBLISHABLE_TOKEN'])

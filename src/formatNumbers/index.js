@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const _fp = require('lodash/fp')
 const numbro = require('numbro')
 
 /**
@@ -27,6 +28,34 @@ numbro.registerLanguage({
 numbro.setLanguage('en-EEON')
 
 /**
+ * ECharts formatter doesn't support use of external libs so we have our own little formatter
+ */
+exports.formatChartNumber = (rawValue) => {
+  const value = Math.abs(rawValue)
+  const ONE_THOUSAND = 1000
+  const ONE_MILLION = 1000000
+  const ONE_BILLION = 1000000000
+  const ONE_TRILLION = 1000000000000
+  const ONE_QUADRILLION = 1000000000000000
+  const prefix = rawValue < 0 ? '-' : ''
+  if (value < ONE_THOUSAND) {
+    return value
+  }
+  if (value < ONE_MILLION) {
+    return `${prefix}${value / ONE_THOUSAND}K`
+  }
+  if (value < ONE_BILLION) {
+    return `${prefix}${value / ONE_MILLION}M`
+  }
+  if (value < ONE_TRILLION) {
+    return `${prefix}${value / ONE_BILLION}B`
+  }
+  if (value < ONE_QUADRILLION) {
+    return `${prefix}${value / ONE_TRILLION}T`
+  }
+}
+
+/**
  * Takes a number and formats it nicely into a human-readable string
  * e.g. 38400000000 --> 38.4B
  */
@@ -43,6 +72,22 @@ exports.formatNumberNicely = (value, args = {}) => {
 
   return numbro(value).format(rest)
 }
+
+exports.isEven = (value) => _.isEqual(value % 2, 0)
+
+exports.isGreaterThanZero = _fp.pipe(_fp.toNumber, _fp.gt(0))
+
+exports.isLessThanZero = _fp.pipe(_fp.toNumber, _fp.lt(0))
+
+exports.isOdd = _fp.complement(exports.isEven)
+
+exports.isZero = _fp.isEqual(0)
+
+exports.prefixValueWithCurrencySymbol = (value) =>
+  exports.formatNumberNicely(value, { currency: true })
+
+exports.suffixValueWithPercentSymbol = (value) =>
+  exports.formatNumberNicely(value, { percentage: true })
 
 /**
  * Takes a string and unformats it into a raw number

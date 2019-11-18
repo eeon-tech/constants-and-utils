@@ -26,6 +26,9 @@ exports.stripePlans = {
   },
 }
 
+exports.getPlanIdForPlanName = (planName) =>
+  _.get(exports.stripePlans, [planName, 'id'])
+
 exports.stripeSubscriptionStatuses = utils.keymirrorLower({
   ACTIVE: null,
   CANCELED: null,

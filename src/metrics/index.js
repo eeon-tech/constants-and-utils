@@ -1,3 +1,4 @@
+const { metricRelations } = require('../database')
 const subscriptionPlans = require('../subscriptionPlans')
 const {
   betaValueBuckets,
@@ -23,16 +24,6 @@ const {
 const { BASIC, PROFESSIONAL } = subscriptionPlans.stripePlans
 
 /**
- * How a specific metric is related to a Security (via Models)
- * https://github.com/eeon-tech/customer-api/tree/development/src/models
- */
-const metricRelations = {
-  ADVANCED_STATS: 'AdvancedStats',
-  KEY_STATS: 'KeyStats',
-  QUOTE: 'Quote',
-}
-
-/**
  * ====================
  * All Supported Metrics
  * These are used for both Heatmap Filters, Screeners, and Alerts
@@ -47,7 +38,7 @@ exports.avg10Volume = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'avg10Volume',
   label: '10 Day Average Volume',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '10D Avg. Volume',
 }
 
@@ -59,7 +50,7 @@ exports.avg30Volume = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'avg30Volume',
   label: '30 Day Average Volume',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '30D Avg. Volume',
 }
 
@@ -71,7 +62,7 @@ exports.beta = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'beta',
   label: 'Beta',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Beta',
 }
 
@@ -87,14 +78,35 @@ exports.changePercent = {
   shortLabel: '% Change',
 }
 
+exports.currentDebt = {
+  valueBuckets: marketCapValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'currentDebt',
+  label: 'Current Debt',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Current Debt',
+}
+
+/**
+ * 30 Day Percent Change
+ */
+exports.day30ChangePercent = {
+  valueBuckets: percentageValueBuckets,
+  databaseModelName: metricRelations.KEY_STATS,
+  id: 'day30ChangePercent',
+  label: '30 Day Percent Change',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: '30D % Change',
+}
+
 /**
  * 5 Day Percent Change
  */
-exports.day5changePercent = {
+exports.day5ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day5ChangePercent',
-  label: '5 DayPercent Change',
+  label: '5 Day Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '5D % Change',
 }
@@ -107,7 +119,7 @@ exports.day50MovingAvg = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day50MovingAvg',
   label: '50 Day Moving Average',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '50D Moving Avg.',
 }
 
@@ -119,8 +131,17 @@ exports.day200MovingAvg = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day200MovingAvg',
   label: '200 Day Moving Average',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '200D Moving Avg.',
+}
+
+exports.debtToEquity = {
+  valueBuckets: peRatioValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'debtToEquity',
+  label: 'Debt to Equity',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Debt/Equity',
 }
 
 /**
@@ -131,7 +152,7 @@ exports.dividendYield = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'dividendYield',
   label: 'Dividend Yield',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Div. Yield',
 }
 
@@ -143,20 +164,32 @@ exports.EBITDA = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'EBITDA',
   label: 'EBITDA',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EBITDA',
 }
 
 /**
  * Enterprise Value
  */
-exports.month1ChangePercent = {
+exports.enterpriseValue = {
   valueBuckets: EBITDAValueBuckets,
   databaseModelName: metricRelations.ADVANCED_STATS,
-  id: 'month1ChangePercent',
+  id: 'enterpriseValue',
   label: 'Enterprise Value',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Enterprise Value',
+}
+
+/**
+ * Enterprise Value to Revenue
+ */
+exports.enterpriseValueToRevenue = {
+  valueBuckets: priceToBookValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'enterpriseValueToRevenue',
+  label: 'Enterprise Value to Revenue',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Ent. Value to Rev.',
 }
 
 /**
@@ -167,7 +200,7 @@ exports.extendedChangePercent = {
   databaseModelName: metricRelations.QUOTE,
   id: 'extendedChangePercet',
   label: 'After Hours Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'After Hours % Percent',
 }
 
@@ -179,7 +212,7 @@ exports.forwardPERatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'pegRatio',
   label: 'Forward PE Ratio',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'For. PE Ratio',
 }
 
@@ -215,7 +248,7 @@ exports.month1ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month1ChangePercent',
   label: '1M Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '1M % Change',
 }
 
@@ -227,7 +260,7 @@ exports.month3ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month3ChangePercent',
   label: '3M Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '3M % Change',
 }
 
@@ -239,8 +272,20 @@ exports.month6ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month6ChangePercent',
   label: '6M Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '6M % Change',
+}
+
+/**
+ * Open
+ */
+exports.open = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'open',
+  label: 'Open',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Open',
 }
 
 /**
@@ -263,7 +308,7 @@ exports.pegRatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'pegRatio',
   label: 'PEG Ratio',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'PEG Ratio',
 }
 
@@ -287,7 +332,7 @@ exports.priceToBook = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToBook',
   label: 'Price to Book',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'P/B',
 }
 
@@ -299,7 +344,7 @@ exports.priceToSales = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToSales',
   label: 'Price to Sales',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'P/S',
 }
 
@@ -311,7 +356,7 @@ exports.profitMargin = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'profitMargin',
   label: 'Profit Margin',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Profit Margin',
 }
 
@@ -323,7 +368,7 @@ exports.revenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenue',
   label: 'Revenue',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue',
 }
 
@@ -335,7 +380,7 @@ exports.revenuePerEmployee = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerEmployee',
   label: 'Revenue per Employee',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue/Employee',
 }
 
@@ -347,7 +392,7 @@ exports.revenuePerShare = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerShare',
   label: 'Revenue per Share',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue/Share',
 }
 
@@ -359,7 +404,7 @@ exports.ttmEPS = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ttmTPS',
   label: 'EPS (TTM)',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EPS (TTM)',
 }
 
@@ -378,24 +423,24 @@ exports.volume = {
 /**
  * 52 Week High
  */
-exports.week52low = {
+exports.week52High = {
   valueBuckets: priceValueBuckets,
-  databaseModelName: metricRelations.KEY_STATS,
-  id: 'week52high',
+  databaseModelName: metricRelations.QUOTE,
+  id: 'week52High',
   label: '52 Week High',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '52W High',
 }
 
 /**
  * 52 Week Low
  */
-exports.week52low = {
+exports.week52Low = {
   valueBuckets: priceValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
-  id: 'week52low',
+  id: 'week52Low',
   label: '52 Week Low',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '52W Low',
 }
 
@@ -407,7 +452,7 @@ exports.year1ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year1ChangePercent',
   label: '1Y Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '1Y % Change',
 }
 
@@ -419,7 +464,7 @@ exports.year2ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year2ChangePercent',
   label: '2Y Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '2Y % Change',
 }
 
@@ -431,7 +476,7 @@ exports.year5ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year5ChangePercent',
   label: '5Y Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '5Y % Change',
 }
 
@@ -443,6 +488,6 @@ exports.ytdChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ytdChangePercent',
   label: 'YTD Percent Change',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'YTD % Change',
 }
