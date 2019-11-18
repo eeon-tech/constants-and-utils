@@ -30,8 +30,12 @@ exports.getDatabasePassword = (env = process.env) =>
 
 exports.getDatabasePort = (env = process.env) =>
   _.get(env, ['DATABASE_PORT'], '27017')
-;(exports.getDatabaseUsername = (env = process.env) => _),
-  get(env, ['DATABASE_USERNAME'], 'user')
+
+exports.getDatabaseUsername = (env = process.env) =>
+  _.get(env, ['DATABASE_USERNAME'], 'user')
+
+exports.getEEONEnvironment = (env = process.env) =>
+  _.get(env, ['EEON_ENVIRONMENT'], 'development')
 
 exports.getIEXPublishableToken = (env = process.env) =>
   isIEXSandbox(env)
