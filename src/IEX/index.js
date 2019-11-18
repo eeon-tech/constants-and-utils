@@ -27,23 +27,23 @@ exports.securityTypes = utils.keymirrorLower({
 })
 
 exports.timeframes = {
-  '5Y': '5y',
-  '2Y': '2y',
-  '1Y': '1y',
-  '6M': '6m',
-  '3M': '3m',
-  '1M': '1m',
-  '5D': '5d',
+  FIVE_DAYS: '5d',
+  FIVE_YEARS: '5y',
+  ONE_MONTH: '1m',
+  ONE_YEAR: '1y',
+  SIX_MONTHS: '6m',
+  THREE_MONTHS: '3m',
+  TWO_YEARS: '2y',
 }
 
 exports.timeRanges = {
-  '1M': '1m',
-  '1Y': '1Y',
-  '2Y': '2Y',
-  '3M': '3M',
-  '5D': '5d',
-  '5Y': '5y',
-  '6M': '6M',
+  FIVE_DAYS: '5d',
+  FIVE_YEARS: '5y',
+  ONE_MONTH: '1m',
+  ONE_YEAR: '1Y',
+  SIX_MONTHS: '6M',
+  THREE_MONTHS: '3M',
+  TWO_YEARS: '2Y',
   YTD: 'ytd',
 }
 

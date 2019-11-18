@@ -1,4 +1,10 @@
+const lists = require('../lists')
 const utils = require('../utils')
+
+exports.listRelations = utils.keymirrorLower({
+  SCREENER: null,
+  WATCHLIST: null,
+})
 
 /**
  * How a specific metric is related to a Security (via Models)
@@ -10,7 +16,7 @@ exports.metricRelations = {
   QUOTE: 'Quote',
 }
 
-exports.listRelations = utils.keymirrorLower({
-  WATCHLISTS: null,
-  SCREENERS: null,
-})
+exports.getSelectedEntityType = (listType) =>
+  lists.isListTypeScreener(listType)
+    ? exports.listRelations.SCREENER
+    : exports.listRelations.WATCHLIST
