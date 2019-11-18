@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`securities scopes should stay consistent 1`] = `
+Object {
+  "MARKET_INDICES": Object {
+    "name": "marketIndices",
+    "options": Object {
+      "where": Object {
+        "symbol": Array [
+          "DIA",
+          "IWM",
+          "QQQ",
+          "SPY",
+        ],
+      },
+    },
+  },
+  "SECTOR_INDICES": Object {
+    "name": "sectorIndices",
+    "options": Object {
+      "where": Object {
+        "symbol": Array [
+          "XLB",
+          "XLC",
+          "XLE",
+          "XLF",
+          "XLI",
+          "XLK",
+          "XLP",
+          "XLRE",
+          "XLU",
+          "XLV",
+          "XLY",
+        ],
+      },
+    },
+  },
+}
+`;

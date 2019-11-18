@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jobs cleanPeriods should remain consistent 1`] = `
+Object {
+  "1D": 86400,
+}
+`;
+
+exports[`jobs queueNames should remain consistent 1`] = `
+Object {
+  "calculateEEONPerformanceScores": "calculateEEONPerformanceScores",
+  "calculateMarketInsights": "calculateMarketInsights",
+}
+`;
+
+exports[`jobs timezone should remain consistent 1`] = `"America/New_York"`;
