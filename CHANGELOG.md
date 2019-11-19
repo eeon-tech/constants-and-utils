@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.3.0...v1.4.0) (2019-11-19)
+
+
+### Features
+
+* **list-types:** adds EEONList list type ([18d9496](https://github.com/eeon-tech/constants-and-utils/commit/18d94968ed0bb926d213cf13462c5735326b1595))
+
 # [1.3.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.2.0...v1.3.0) (2019-11-18)
 
 
