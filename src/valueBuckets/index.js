@@ -2,9 +2,9 @@
  * Pre-defined value buckets for Alert and Screener Criteria
  * These are solely values, predicates are separate and can be applied to a bucket
  */
-const formatNumbers = require('../formatNumbers')
+import formatNumbers from '../formatNumbers'
 
-const createPercentageValueBucket = (value, label) => ({
+export const createPercentageValueBucket = (value, label) => ({
   formattedValue: formatNumbers.formatNumberNicely(value, {
     percentage: true,
     mantissa: 2,
@@ -12,9 +12,8 @@ const createPercentageValueBucket = (value, label) => ({
   label,
   value,
 })
-exports.createPercentageValueBucket = createPercentageValueBucket
 
-const createNumericValueBucket = (
+export const createNumericValueBucket = (
   value,
   label,
   priceValueBucketsOverrides = {}
@@ -26,9 +25,8 @@ const createNumericValueBucket = (
   label,
   value,
 })
-exports.createNumericValueBucket = createNumericValueBucket
 
-exports.betaValueBuckets = [
+export const betaValueBuckets = [
   createNumericValueBucket(0),
   createNumericValueBucket(0.5, 'Less volatile than market'),
   createNumericValueBucket(1, 'Moves with Market'),
@@ -36,7 +34,7 @@ exports.betaValueBuckets = [
   createNumericValueBucket(2),
 ]
 
-exports.dividendYieldValueBuckets = [
+export const dividendYieldValueBuckets = [
   createPercentageValueBucket(0, 'No Dividend'),
   createPercentageValueBucket(0.01),
   createPercentageValueBucket(0.02),
@@ -48,7 +46,7 @@ exports.dividendYieldValueBuckets = [
   createPercentageValueBucket(0.08),
 ]
 
-exports.EBITDAValueBuckets = [
+export const EBITDAValueBuckets = [
   createNumericValueBucket(0, 'Profitable'),
   createNumericValueBucket(1000000),
   createNumericValueBucket(5000000),
@@ -72,7 +70,7 @@ exports.EBITDAValueBuckets = [
 ]
 
 const marketCapValueOverrides = { currency: true }
-exports.marketCapValueBuckets = [
+export const marketCapValueBuckets = [
   createNumericValueBucket(50000000, 'Micro-cap', marketCapValueOverrides),
   createNumericValueBucket(100000000, 'Tiny-cap', marketCapValueOverrides),
   createNumericValueBucket(500000000, 'Small-cap', marketCapValueOverrides),
@@ -85,14 +83,14 @@ exports.marketCapValueBuckets = [
   createNumericValueBucket(500000000000, 'Mega-cap', marketCapValueOverrides),
 ]
 
-exports.pegRatioValueBuckets = [
+export const pegRatioValueBuckets = [
   createNumericValueBucket(0),
   createNumericValueBucket(1, 'Fair value'),
   createNumericValueBucket(2),
   createNumericValueBucket(3),
 ]
 
-exports.peRatioValueBuckets = [
+export const peRatioValueBuckets = [
   createNumericValueBucket(0),
   createNumericValueBucket(5),
   createNumericValueBucket(10),
@@ -104,7 +102,7 @@ exports.peRatioValueBuckets = [
   createNumericValueBucket(40),
 ]
 
-exports.percentageValueBuckets = [
+export const percentageValueBuckets = [
   createPercentageValueBucket(0),
   createPercentageValueBucket(0.01),
   createPercentageValueBucket(0.02),
@@ -123,7 +121,7 @@ exports.percentageValueBuckets = [
 ]
 
 const priceValueBucketsOverrides = { currency: true }
-exports.priceValueBuckets = [
+export const priceValueBuckets = [
   createNumericValueBucket(10, priceValueBucketsOverrides),
   createNumericValueBucket(15, priceValueBucketsOverrides),
   createNumericValueBucket(20, priceValueBucketsOverrides),
@@ -142,7 +140,7 @@ exports.priceValueBuckets = [
   createNumericValueBucket(2000, priceValueBucketsOverrides),
 ]
 
-exports.priceToBookValueBuckets = [
+export const priceToBookValueBuckets = [
   createNumericValueBucket(1, 'Low'),
   createNumericValueBucket(2),
   createNumericValueBucket(3),
@@ -155,7 +153,7 @@ exports.priceToBookValueBuckets = [
   createNumericValueBucket(10),
 ]
 
-exports.profitMarginValueBuckets = [
+export const profitMarginValueBuckets = [
   createPercentageValueBucket(0),
   createPercentageValueBucket(10),
   createPercentageValueBucket(15),
@@ -167,7 +165,7 @@ exports.profitMarginValueBuckets = [
 ]
 
 const revenueValueBucketOverrides = { currency: true }
-exports.revenueValueBuckets = [
+export const revenueValueBuckets = [
   createNumericValueBucket(50000000, 'Small', revenueValueBucketOverrides),
   createNumericValueBucket(100000000, null, revenueValueBucketOverrides),
   createNumericValueBucket(250000000, null, revenueValueBucketOverrides),
@@ -180,7 +178,7 @@ exports.revenueValueBuckets = [
 ]
 
 const revenuePerEmployeeValueBucketOverrides = { currency: true }
-exports.revenuePerEmployeeValueBuckets = [
+export const revenuePerEmployeeValueBuckets = [
   createNumericValueBucket(
     100000,
     null,
@@ -219,7 +217,7 @@ exports.revenuePerEmployeeValueBuckets = [
 ]
 
 const revenuePerShareValueBucketOverrides = { currency: true }
-exports.revenuePerShareValueBuckets = [
+export const revenuePerShareValueBuckets = [
   createNumericValueBucket(0, null, revenuePerShareValueBucketOverrides),
   createNumericValueBucket(5, null, revenuePerShareValueBucketOverrides),
   createNumericValueBucket(10, null, revenuePerShareValueBucketOverrides),
@@ -232,7 +230,7 @@ exports.revenuePerShareValueBuckets = [
   createNumericValueBucket(1000, null, revenuePerShareValueBucketOverrides),
 ]
 
-exports.ttmEPSValueBuckets = [
+export const ttmEPSValueBuckets = [
   createNumericValueBucket(0),
   createNumericValueBucket(5),
   createNumericValueBucket(10),
@@ -246,7 +244,7 @@ exports.ttmEPSValueBuckets = [
   createNumericValueBucket(50),
 ]
 
-exports.volumeValueBuckets = [
+export const volumeValueBuckets = [
   createNumericValueBucket(100000),
   createNumericValueBucket(500000),
   createNumericValueBucket(1000000),

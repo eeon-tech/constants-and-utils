@@ -1,6 +1,6 @@
-const _ = require('lodash')
+import _ from 'lodash'
 
-exports.eventNames = {
+export const eventNames = {
   ACCOUNT_CREATED: 'account.created',
   ALERT_CREATED: 'alert.created',
   ALERT_DELETED: 'alert.deleted',
@@ -76,7 +76,7 @@ const unsafeFieldsMap = {
   phone: '$phone',
 }
 
-exports.cleanUserFields = (user = {}) => {
+export const cleanUserFields = (user = {}) => {
   const safeObject = _.entries(user).reduce((acc, [key, value]) => {
     const safeField = _.get(unsafeFieldsMap, key, key)
     acc[safeField] = value

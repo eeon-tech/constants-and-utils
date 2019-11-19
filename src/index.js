@@ -1,25 +1,49 @@
-exports.analytics = require('./analytics')
-exports.authentication = require('./authentication')
-exports.cache = require('./cache')
-exports.creditCards = require('./creditCards')
-exports.database = require('./database')
-exports.dates = require('./dates')
-exports.emails = require('./emails')
-exports.environment = require('./environment')
-exports.formatNumbers = require('./formatNumbers')
-exports.forms = require('./forms')
-exports.graphqlSubscriptions = require('./graphqlSubscriptions')
-exports.IEX = require('./IEX')
-exports.insights = require('./insights')
-exports.jobs = require('./jobs')
-exports.lists = require('./lists')
-exports.metrics = require('./metrics')
-exports.predicates = require('./predicates')
-exports.scores = require('./scores')
-exports.search = require('./search')
-exports.sectors = require('./sectors')
-exports.securities = require('./securities')
-exports.sorting = require('./sorting')
-exports.subscriptionPlans = require('./subscriptionPlans')
-exports.utils = require('./utils')
-exports.valueBuckets = require('./valueBuckets')
+import * as analytics from './analytics'
+import * as authentication from './authentication'
+import * as cache from './cache'
+import * as creditCards from './creditCards'
+import * as dates from './dates'
+import * as emails from './emails'
+import * as environment from './environment'
+import * as formatNumbers from './formatNumbers'
+import * as forms from './forms'
+import * as graphqlSubscriptions from './graphqlSubscriptions'
+import * as IEX from './IEX'
+import * as insights from './insights'
+import * as jobs from './jobs'
+import * as lists from './lists'
+import * as predicates from './predicates'
+import * as scores from './scores'
+import * as search from './search'
+import * as sectors from './sectors'
+import * as securities from './securities'
+import * as sorting from './sorting'
+import * as subscriptionPlans from './subscriptionPlans'
+import * as utils from './utils'
+import * as valueBuckets from './valueBuckets'
+
+export {
+  analytics,
+  authentication,
+  cache,
+  creditCards,
+  dates,
+  emails,
+  environment,
+  formatNumbers,
+  forms,
+  graphqlSubscriptions,
+  IEX,
+  insights,
+  jobs,
+  lists,
+  predicates,
+  scores,
+  search,
+  sectors,
+  securities,
+  sorting,
+  subscriptionPlans,
+  utils,
+  valueBuckets,
+}
