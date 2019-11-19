@@ -596,10 +596,14 @@ export const screenerMetricsList = [
 /**
  * List types
  */
-export const listTypes = utils.keymirrorUpper({
-  SCREENER: null,
-  WATCHLIST: null,
-})
+export const listTypes = {
+  EEON_SCREENERLIST: 'eeonScreenerlist',
+  EEON_WATCHLIST: 'eeonWatchlist',
+  SECTOR_LIST: 'sectorList',
+  TAG_LIST: 'tagList',
+  USER_SCREENERLIST: 'userScreenerlist',
+  USER_WATCHLIST: 'userWatchlist',
+}
 
 /**
  * Checks literal string values for type of list
