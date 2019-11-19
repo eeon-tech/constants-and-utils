@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.4.1...v1.5.0) (2019-11-19)
+
+
+### Features
+
+* **list-types:** adds new list types for restructured lists ([f94d84b](https://github.com/eeon-tech/constants-and-utils/commit/f94d84b87f97dee020337a9a598cef4e689315c0))
+
 ## [1.4.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.4.0...v1.4.1) (2019-11-19)
 
 
