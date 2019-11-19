@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.2.0...v1.3.0) (2019-11-18)
+
+
+### Features
+
+* **constants:** renames constants for enums ([66fbad1](https://github.com/eeon-tech/constants-and-utils/commit/66fbad1a76668ddec4d487dedbc43540d5f06685))
+
 # [1.2.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.1.0...v1.2.0) (2019-11-18)
 
 
