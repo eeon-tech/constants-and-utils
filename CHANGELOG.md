@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.4.0...v1.4.1) (2019-11-19)
+
+
+### Bug Fixes
+
+* **build:** removes dist folder from gitignore with release ([f3f90b0](https://github.com/eeon-tech/constants-and-utils/commit/f3f90b0a1e94314c64e913c1118cf146b4f9b5a2))
+
 # [1.4.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.3.0...v1.4.0) (2019-11-19)
 
 
