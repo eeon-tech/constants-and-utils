@@ -597,7 +597,6 @@ export const screenerMetricsList = [
  * List types
  */
 export const listTypes = utils.keymirrorUpper({
-  EEONLIST: null,
   SCREENER: null,
   WATCHLIST: null,
 })
