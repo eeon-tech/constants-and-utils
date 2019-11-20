@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.0...v1.5.1) (2019-11-20)
+
+
+### Bug Fixes
+
+* **stripe-plans:** adds environment to stripe plans export ([1d7682a](https://github.com/eeon-tech/constants-and-utils/commit/1d7682aa2e4875d038dac47eb4c334c34b7274f9))
+
 # [1.5.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.4.1...v1.5.0) (2019-11-19)
 
 
