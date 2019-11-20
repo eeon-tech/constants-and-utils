@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.1...v1.5.2) (2019-11-20)
+
+
+### Bug Fixes
+
+* **stripe-plans:** make stripe plans a plain enum object ([3877125](https://github.com/eeon-tech/constants-and-utils/commit/3877125a8e190ce243264e9c445a8301e51319eb))
+
 ## [1.5.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.0...v1.5.1) (2019-11-20)
 
 
