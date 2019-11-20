@@ -15,19 +15,10 @@ exports.stripeCouponDurations = utils.keymirrorLower({
   REPEATING: null,
 })
 
-exports.stripePlans = {
-  BASIC: {
-    name: 'BASIC',
-    id: environment.getStripeBasicPlanId(process.env),
-  },
-  PROFESSIONAL: {
-    name: 'PROFESSIONAL',
-    id: environment.getStripeProfessionalPlanId(process.env),
-  },
-}
-
-exports.getPlanIdForPlanName = (planName) =>
-  _.get(exports.stripePlans, [planName, 'id'])
+exports.stripePlans = utils.keymirrorUpper({
+  BASIC,
+  PROFESSIONAL,
+})
 
 exports.stripeSubscriptionStatuses = utils.keymirrorLower({
   ACTIVE: null,
