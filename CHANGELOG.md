@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.2...v1.5.3) (2019-11-20)
+
+
+### Bug Fixes
+
+* **stripe-plans:** fixes keymirror bad usage ([058ed55](https://github.com/eeon-tech/constants-and-utils/commit/058ed557cad597c74162a3c5fb723c846700b8e5))
+
 ## [1.5.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.1...v1.5.2) (2019-11-20)
 
 
