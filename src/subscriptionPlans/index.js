@@ -18,11 +18,11 @@ exports.stripeCouponDurations = utils.keymirrorLower({
 exports.stripePlans = {
   BASIC: {
     name: 'BASIC',
-    id: environment.getStripeBasicPlanId(),
+    id: environment.getStripeBasicPlanId(process.env),
   },
   PROFESSIONAL: {
     name: 'PROFESSIONAL',
-    id: environment.getStripeProfessionalPlanId(),
+    id: environment.getStripeProfessionalPlanId(process.env),
   },
 }
 
