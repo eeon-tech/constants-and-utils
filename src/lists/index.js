@@ -225,7 +225,7 @@ export const extendedChangePercent = {
 export const forwardPERatio = {
   valueBuckets: peRatioValueBuckets,
   databaseModelName: metricRelations.ADVANCED_STATS,
-  id: 'pegRatio',
+  id: 'forwardPERatio',
   label: 'Forward PE Ratio',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'For. PE Ratio',
@@ -514,25 +514,27 @@ export const ytdChangePercent = {
  */
 export const heatmapOrders = {
   popular: [
-    latestPrice,
     changePercent,
+    day5ChangePercent,
+    latestPrice,
     marketCap,
-    volume,
+    month1ChangePercent,
+    peRatio,
     // EEON Scores
   ],
   other: [
-    peRatio,
+    beta,
+    dividendYield,
+    forwardPERatio,
     open,
-    // Dividend Yield
-    // 1 Year Percent Change
-    // Beta
-    // Forward PE Ratio
-    // Price to Book
-    // Price to Sales
-    // Profit Margin
-    // Revenue per Employee
-    // Revenue per Share
-    // YTD Percent Change
+    previousClose,
+    priceToBook,
+    priceToSales,
+    profitMargin,
+    revenuePerEmployee,
+    revenuePerShare,
+    volume,
+    ytdChangePercent,
   ],
 }
 
@@ -540,6 +542,9 @@ export const heatmapOrdersList = [
   ...heatmapOrders.popular,
   ...heatmapOrders.other,
 ]
+
+export const getHeatmapOrdersMetricById = (id) =>
+  heatmapOrdersList.find((item) => _.isEqual(item.id, id)) || changePercent
 
 /**
  * ====================
@@ -599,8 +604,6 @@ export const screenerMetricsList = [
 export const listTypes = {
   EEON_SCREENERLIST: 'eeonScreenerlist',
   EEON_WATCHLIST: 'eeonWatchlist',
-  SECTOR_LIST: 'sectorList',
-  TAG_LIST: 'tagList',
   USER_SCREENERLIST: 'userScreenerlist',
   USER_WATCHLIST: 'userWatchlist',
 }
