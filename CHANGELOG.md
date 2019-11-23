@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.3...v1.6.0) (2019-11-23)
+
+
+### Features
+
+* **lists:** adds fn to grab heatmap sorting metric by id ([790db17](https://github.com/eeon-tech/constants-and-utils/commit/790db174b11a6aa1603717be0948097b12630dab))
+
 ## [1.5.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.2...v1.5.3) (2019-11-20)
 
 
