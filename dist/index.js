@@ -27222,7 +27222,7 @@ exports.volumeValueBuckets = volumeValueBuckets;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.isListWatchlist = exports.isListScreener = exports.isListTypeWatchlist = exports.isListTypeScreener = exports.listTypes = exports.screenerMetricsList = exports.screenerMetrics = exports.getHeatmapOrdersMetricById = exports.heatmapOrdersList = exports.heatmapOrders = exports.ytdChangePercent = exports.year5ChangePercent = exports.year2ChangePercent = exports.year1ChangePercent = exports.week52Low = exports.week52High = exports.volume = exports.ttmEPS = exports.revenuePerShare = exports.revenuePerEmployee = exports.revenue = exports.profitMargin = exports.priceToSales = exports.priceToBook = exports.previousClose = exports.pegRatio = exports.peRatio = exports.open = exports.month6ChangePercent = exports.month3ChangePercent = exports.month1ChangePercent = exports.marketCap = exports.latestPrice = exports.forwardPERatio = exports.extendedChangePercent = exports.enterpriseValueToRevenue = exports.enterpriseValue = exports.EBITDA = exports.dividendYield = exports.debtToEquity = exports.day200MovingAvg = exports.day50MovingAvg = exports.day5ChangePercent = exports.day30ChangePercent = exports.currentDebt = exports.changePercent = exports.beta = exports.avg30Volume = exports.avg10Volume = exports.metricRelations = void 0;
+exports.isListWatchlist = exports.isListScreener = exports.isListTypeWatchlist = exports.isListTypeScreener = exports.listTypes = exports.getScreenerMetricById = exports.screenerMetricsList = exports.screenerMetrics = exports.getHeatmapOrdersMetricById = exports.heatmapOrdersList = exports.heatmapOrders = exports.ytdChangePercent = exports.year5ChangePercent = exports.year2ChangePercent = exports.year1ChangePercent = exports.week52Low = exports.week52High = exports.volume = exports.ttmEPS = exports.revenuePerShare = exports.revenuePerEmployee = exports.revenue = exports.profitMargin = exports.priceToSales = exports.priceToBook = exports.previousClose = exports.pegRatio = exports.peRatio = exports.open = exports.month6ChangePercent = exports.month3ChangePercent = exports.month1ChangePercent = exports.marketCap = exports.latestPrice = exports.forwardPERatio = exports.extendedChangePercent = exports.enterpriseValueToRevenue = exports.enterpriseValue = exports.EBITDA = exports.dividendYield = exports.debtToEquity = exports.day200MovingAvg = exports.day50MovingAvg = exports.day5ChangePercent = exports.day30ChangePercent = exports.currentDebt = exports.changePercent = exports.beta = exports.avg30Volume = exports.avg10Volume = exports.metricRelations = void 0;
 
 var _lodash = _interopRequireDefault(require("lodash"));
 
@@ -27800,11 +27800,19 @@ var screenerMetrics = {
 };
 exports.screenerMetrics = screenerMetrics;
 var screenerMetricsList = [].concat(_toConsumableArray(screenerMetrics.popular), _toConsumableArray(screenerMetrics.other));
+exports.screenerMetricsList = screenerMetricsList;
+
+var getScreenerMetricById = function getScreenerMetricById(id) {
+  return screenerMetricsList.find(function (item) {
+    return _lodash.default.isEqual(item.id, id);
+  }) || changePercent;
+};
 /**
  * List types
  */
 
-exports.screenerMetricsList = screenerMetricsList;
+
+exports.getScreenerMetricById = getScreenerMetricById;
 var listTypes = {
   EEON_SCREENERLIST: 'eeonScreenerlist',
   EEON_WATCHLIST: 'eeonWatchlist',
@@ -28053,7 +28061,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58393" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57863" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

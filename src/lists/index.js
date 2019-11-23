@@ -598,6 +598,9 @@ export const screenerMetricsList = [
   ...screenerMetrics.other,
 ]
 
+export const getScreenerMetricById = (id) =>
+  screenerMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+
 /**
  * List types
  */
