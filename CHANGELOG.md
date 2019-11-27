@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.7.0...v1.8.0) (2019-11-27)
+
+
+### Features
+
+* **lists:** utils for checking list ownership ([0e35f6d](https://github.com/eeon-tech/constants-and-utils/commit/0e35f6d5bf8e64c0a67ece8c248f8429fe9a7e1d))
+
 # [1.7.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.6.0...v1.7.0) (2019-11-23)
 
 
