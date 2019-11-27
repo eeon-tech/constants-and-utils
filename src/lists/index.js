@@ -612,6 +612,16 @@ export const listTypes = {
 }
 
 /**
+ * Checks if a list is an EEON list
+ */
+export const isEEONList = (list = {}) => !_.has(list, ['userId'])
+
+/**
+ * Checks if a list is a User list
+ */
+export const isUserList = (list = {}) => _.has(list, ['userId'])
+
+/**
  * Checks literal string values for type of list
  */
 export const isListTypeScreener = (listType) =>
