@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.6.0...v1.7.0) (2019-11-23)
+
+
+### Features
+
+* **lists:** adds getter for screener metric by id ([d6497b5](https://github.com/eeon-tech/constants-and-utils/commit/d6497b5d38438ca2ae0b7653c5d70f30fb2c0ab5))
+
 # [1.6.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.5.3...v1.6.0) (2019-11-23)
 
 
