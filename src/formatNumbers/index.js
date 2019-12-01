@@ -59,7 +59,7 @@ exports.formatChartNumber = (rawValue) => {
  * Takes a number and formats it nicely into a human-readable string
  * e.g. 38400000000 --> 38.4B
  */
-exports.formatNumberNicely = (value, args = {}) => {
+exports.formatNumberNicely = (value = '', args = {}) => {
   const { currency, percentage, ...rest } = args
 
   if (currency) {
