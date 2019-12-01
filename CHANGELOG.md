@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.0...v1.8.1) (2019-12-01)
+
+
+### Bug Fixes
+
+* **format-numbers:** adds default value ([d4881eb](https://github.com/eeon-tech/constants-and-utils/commit/d4881ebd9bb46b02e09c66c8d56e10a25f8a4da0))
+
 # [1.8.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.7.0...v1.8.0) (2019-11-27)
 
 
