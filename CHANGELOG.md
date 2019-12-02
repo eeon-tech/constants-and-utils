@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.0...v1.9.1) (2019-12-02)
+
+
+### Bug Fixes
+
+* **build:** runs build step, need to do this on CI ([b56b882](https://github.com/eeon-tech/constants-and-utils/commit/b56b8822ead6b50ac09d37c894ac96d33a53e9b3))
+
 # [1.9.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.2...v1.9.0) (2019-12-02)
 
 
