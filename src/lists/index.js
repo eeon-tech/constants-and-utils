@@ -271,6 +271,19 @@ export const forwardPERatio = {
 }
 
 /**
+ * Gross Profit
+ */
+export const grossProfit = {
+  valueBuckets: revenueValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'grossProfit',
+  label: 'Gross Profit',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Gross Profit',
+  transform: averageCurrencyTransform,
+}
+
+/**
  * Latest Price
  */
 export const latestPrice = {
@@ -466,6 +479,19 @@ export const revenuePerShare = {
 }
 
 /**
+ * Shares Outstanding
+ */
+export const sharesOutstanding = {
+  valueBuckets: revenueValueBuckets,
+  databaseModelName: metricRelations.KEY_STATS,
+  id: 'sharesOutstanding',
+  label: 'Shares Outstanding',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Shares',
+  transform: averageTransform,
+}
+
+/**
  * TTM EPS
  */
 export const ttmEPS = {
@@ -479,6 +505,32 @@ export const ttmEPS = {
 }
 
 /**
+ * Total Cash
+ */
+export const totalCash = {
+  valueBuckets: revenueValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'totalCash',
+  label: 'Total Cash',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Cash',
+  transform: averageCurrencyTransform,
+}
+
+/**
+ * Total Revenue
+ */
+export const totalRevenue = {
+  valueBuckets: revenueValueBuckets,
+  databaseModelName: metricRelations.ADVANCED_STATS,
+  id: 'totalRevenue',
+  label: 'Total Revenue',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Total Revenue',
+  transform: averageCurrencyTransform,
+}
+
+/**
  * Volume
  */
 export const volume = {
@@ -489,6 +541,19 @@ export const volume = {
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Volume',
   transform: volumeTransform,
+}
+
+/**
+ * 52 Week Change
+ */
+export const week52change = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.KEY_STATS,
+  id: 'week52cigh',
+  label: '52 Week Change',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: '52W Change',
+  transform: currencyTransform,
 }
 
 /**
