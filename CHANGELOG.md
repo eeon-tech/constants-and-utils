@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.1...v1.8.2) (2019-12-01)
+
+
+### Bug Fixes
+
+* **build:** ran build step manually ([df0e8f4](https://github.com/eeon-tech/constants-and-utils/commit/df0e8f43f985265ea5428e940af0eee4bcdb3427))
+
 ## [1.8.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.0...v1.8.1) (2019-12-01)
 
 
