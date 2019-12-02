@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import _fp from 'lodash/fp'
-import utils from '../utils'
 import subscriptionPlans from '../subscriptionPlans'
+import { formatNumberNicely } from '../formatNumbers'
 import {
   betaValueBuckets,
   dividendYieldValueBuckets,
@@ -44,6 +44,29 @@ export const metricRelations = {
  * These are used for both Heatmap Filters, Screeners, and Alerts
  * ====================
  */
+/**
+ * Transforms
+ */
+export const averageTransform = (value = 0) =>
+  formatNumberNicely(value, { average: true })
+
+export const averageCurrencyTransform = (value = 0) =>
+  formatNumberNicely(value, { average: true, currency: true, mantissa: 1 })
+
+export const betaTransform = (value = 0) =>
+  formatNumberNicely(value, { mantissa: 2 })
+
+export const currencyTransform = (value = 0) =>
+  formatNumberNicely(value, { currency: true, mantissa: 2 })
+
+export const percentageTransform = (value = 0) =>
+  formatNumberNicely(value, { mantissa: 2, percentage: true })
+
+export const ratioTransform = (value = 0) =>
+  formatNumberNicely(value, { mantissa: 2 })
+
+export const volumeTransform = (value = 0) =>
+  formatNumberNicely(value, { average: true, totalLength: 4 })
 
 /**
  * 10 Day Average Trading Volume
@@ -55,6 +78,7 @@ export const avg10Volume = {
   label: '10 Day Average Volume',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '10D Avg. Volume',
+  transform: volumeTransform,
 }
 
 /**
@@ -67,6 +91,7 @@ export const avg30Volume = {
   label: '30 Day Average Volume',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '30D Avg. Volume',
+  transform: volumeTransform,
 }
 
 /**
@@ -79,6 +104,7 @@ export const beta = {
   label: 'Beta',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Beta',
+  transform: betaTransform,
 }
 
 /**
@@ -91,6 +117,7 @@ export const changePercent = {
   label: 'Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '% Change',
+  transform: percentageTransform,
 }
 
 export const currentDebt = {
@@ -100,6 +127,7 @@ export const currentDebt = {
   label: 'Current Debt',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Current Debt',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -112,6 +140,7 @@ export const day30ChangePercent = {
   label: '30 Day Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '30D % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -124,6 +153,7 @@ export const day5ChangePercent = {
   label: '5 Day Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '5D % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -136,6 +166,7 @@ export const day50MovingAvg = {
   label: '50 Day Moving Average',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '50D Moving Avg.',
+  transform: currencyTransform,
 }
 
 /**
@@ -148,6 +179,7 @@ export const day200MovingAvg = {
   label: '200 Day Moving Average',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '200D Moving Avg.',
+  transform: currencyTransform,
 }
 
 export const debtToEquity = {
@@ -157,6 +189,7 @@ export const debtToEquity = {
   label: 'Debt to Equity',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Debt/Equity',
+  transform: ratioTransform,
 }
 
 /**
@@ -169,6 +202,7 @@ export const dividendYield = {
   label: 'Dividend Yield',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Div. Yield',
+  transform: percentageTransform,
 }
 
 /**
@@ -181,6 +215,7 @@ export const EBITDA = {
   label: 'EBITDA',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EBITDA',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -193,6 +228,7 @@ export const enterpriseValue = {
   label: 'Enterprise Value',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Enterprise Value',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -205,6 +241,7 @@ export const enterpriseValueToRevenue = {
   label: 'Enterprise Value to Revenue',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Ent. Value to Rev.',
+  transform: ratioTransform,
 }
 
 /**
@@ -217,6 +254,7 @@ export const extendedChangePercent = {
   label: 'After Hours Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'After Hours % Percent',
+  transform: percentageTransform,
 }
 
 /**
@@ -229,6 +267,7 @@ export const forwardPERatio = {
   label: 'Forward PE Ratio',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'For. PE Ratio',
+  transform: ratioTransform,
 }
 
 /**
@@ -241,6 +280,7 @@ export const latestPrice = {
   label: 'Price',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Price',
+  transform: currencyTransform,
 }
 
 /**
@@ -253,6 +293,7 @@ export const marketCap = {
   label: 'Market Cap.',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Market Cap.',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -265,6 +306,7 @@ export const month1ChangePercent = {
   label: '1M Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '1M % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -277,6 +319,7 @@ export const month3ChangePercent = {
   label: '3M Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '3M % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -289,6 +332,7 @@ export const month6ChangePercent = {
   label: '6M Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '6M % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -301,6 +345,7 @@ export const open = {
   label: 'Open',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Open',
+  transform: currencyTransform,
 }
 
 /**
@@ -313,6 +358,7 @@ export const peRatio = {
   label: 'PE Ratio',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'PE Ratio',
+  transform: ratioTransform,
 }
 
 /**
@@ -325,6 +371,7 @@ export const pegRatio = {
   label: 'PEG Ratio',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'PEG Ratio',
+  transform: ratioTransform,
 }
 
 /**
@@ -337,6 +384,7 @@ export const previousClose = {
   label: 'Previous Close',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Prev. Close',
+  transform: currencyTransform,
 }
 
 /**
@@ -349,6 +397,7 @@ export const priceToBook = {
   label: 'Price to Book',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'P/B',
+  transform: ratioTransform,
 }
 
 /**
@@ -361,6 +410,7 @@ export const priceToSales = {
   label: 'Price to Sales',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'P/S',
+  transform: ratioTransform,
 }
 
 /**
@@ -373,6 +423,7 @@ export const profitMargin = {
   label: 'Profit Margin',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Profit Margin',
+  transform: percentageTransform,
 }
 
 /**
@@ -385,6 +436,7 @@ export const revenue = {
   label: 'Revenue',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -397,6 +449,7 @@ export const revenuePerEmployee = {
   label: 'Revenue per Employee',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue/Employee',
+  transform: averageCurrencyTransform,
 }
 
 /**
@@ -409,6 +462,7 @@ export const revenuePerShare = {
   label: 'Revenue per Share',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Revenue/Share',
+  transform: currencyTransform,
 }
 
 /**
@@ -421,6 +475,7 @@ export const ttmEPS = {
   label: 'EPS (TTM)',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EPS (TTM)',
+  transform: currencyTransform,
 }
 
 /**
@@ -433,6 +488,7 @@ export const volume = {
   label: 'Volume',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'Volume',
+  transform: volumeTransform,
 }
 
 /**
@@ -445,6 +501,7 @@ export const week52High = {
   label: '52 Week High',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '52W High',
+  transform: currencyTransform,
 }
 
 /**
@@ -457,6 +514,7 @@ export const week52Low = {
   label: '52 Week Low',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '52W Low',
+  transform: currencyTransform,
 }
 
 /**
@@ -469,6 +527,7 @@ export const year1ChangePercent = {
   label: '1Y Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '1Y % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -481,6 +540,7 @@ export const year2ChangePercent = {
   label: '2Y Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '2Y % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -493,6 +553,7 @@ export const year5ChangePercent = {
   label: '5Y Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: '5Y % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -505,6 +566,7 @@ export const ytdChangePercent = {
   label: 'YTD Percent Change',
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'YTD % Change',
+  transform: percentageTransform,
 }
 
 /**
@@ -620,18 +682,6 @@ export const isEEONList = (list = {}) => !_.has(list, ['userId'])
  * Checks if a list is a User list
  */
 export const isUserList = (list = {}) => _.has(list, ['userId'])
-
-/**
- * Checks literal string values for type of list
- */
-export const isListTypeScreener = (listType) =>
-  _.isEqual(listType, listTypes.SCREENER)
-
-/**
- * Checks literal string values for type of list
- */
-export const isListTypeWatchlist = (listType) =>
-  _.isEqual(listType, listTypes.WATCHLIST)
 
 /**
  * Checks if a list has criteria (and is a Screener)
