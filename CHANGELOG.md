@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.2...v1.9.0) (2019-12-02)
+
+
+### Features
+
+* **transforms:** adds transform to each metric ([69eed19](https://github.com/eeon-tech/constants-and-utils/commit/69eed1987a33e0613d8def62e151988d3ffd909d))
+
 ## [1.8.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.8.1...v1.8.2) (2019-12-01)
 
 
