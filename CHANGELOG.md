@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.1...v1.9.2) (2019-12-02)
+
+
+### Bug Fixes
+
+* **metrics:** adds new metrics to support display values ([10c5bb7](https://github.com/eeon-tech/constants-and-utils/commit/10c5bb773b9f959bc562a77498add6a3934f1f95))
+
 ## [1.9.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.0...v1.9.1) (2019-12-02)
 
 
