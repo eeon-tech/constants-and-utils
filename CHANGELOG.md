@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.3...v1.10.0) (2019-12-04)
+
+
+### Features
+
+* **queue-names:** adds new job queue name ([d8e858b](https://github.com/eeon-tech/constants-and-utils/commit/d8e858bd473899d6d9c996e98acc2dfb5fad3a8e))
+
 ## [1.9.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.2...v1.9.3) (2019-12-02)
 
 
