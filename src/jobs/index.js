@@ -19,4 +19,5 @@ exports.timezone = 'America/New_York'
 exports.queueNames = utils.keymirror({
   calculateEEONPerformanceScores: null,
   calculateMarketInsights: null,
+  primeCache: null,
 })

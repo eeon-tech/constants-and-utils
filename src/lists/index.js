@@ -108,6 +108,19 @@ export const beta = {
 }
 
 /**
+ * Change
+ */
+export const change = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'change',
+  label: 'Change',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Change',
+  transform: currencyTransform,
+}
+
+/**
  * Percent Change
  */
 export const changePercent = {
@@ -705,7 +718,6 @@ export const screenerMetrics = {
     month3ChangePercent,
     month6ChangePercent,
     pegRatio,
-    previousClose,
     previousClose,
     priceToBook,
     profitMargin,
