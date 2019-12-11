@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.0...v1.11.1) (2019-12-11)
+
+
+### Bug Fixes
+
+* **jobs:** adds job name for calculating security insights ([5024b59](https://github.com/eeon-tech/constants-and-utils/commit/5024b595ed9da743dcd2e050641ca8ca5195ce6a))
+
 # [1.11.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.10.0...v1.11.0) (2019-12-11)
 
 
