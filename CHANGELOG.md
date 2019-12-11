@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.1...v1.11.2) (2019-12-11)
+
+
+### Bug Fixes
+
+* **build:** runs build process ([92edf2e](https://github.com/eeon-tech/constants-and-utils/commit/92edf2e18507dd4fdd64163ab75edfdbcc706a5c))
+
 ## [1.11.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.0...v1.11.1) (2019-12-11)
 
 
