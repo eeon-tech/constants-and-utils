@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.10.0...v1.11.0) (2019-12-11)
+
+
+### Features
+
+* **lists:** adds alert metrics ([fb1ced4](https://github.com/eeon-tech/constants-and-utils/commit/fb1ced489d39630a0e4cd4495580043b7ff700e9))
+
 # [1.10.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.9.3...v1.10.0) (2019-12-04)
 
 
