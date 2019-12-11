@@ -649,6 +649,26 @@ export const ytdChangePercent = {
 
 /**
  * ====================
+ * Available Alerting Metrics
+ * ====================
+ */
+export const alertMetrics = {
+  latestPrice,
+  change,
+  changePercent,
+  volume,
+  marketCap,
+  peRatio,
+  // EEON Scores
+}
+
+export const alertMetricsList = _.toArray(alertMetrics)
+
+export const getAlertMetricById = (id) =>
+  alertMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+
+/**
+ * ====================
  * Available sort orders for heatmap
  * ====================
  */

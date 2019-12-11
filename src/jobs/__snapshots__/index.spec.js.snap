@@ -10,6 +10,7 @@ exports[`jobs queueNames should remain consistent 1`] = `
 Object {
   "calculateEEONPerformanceScores": "calculateEEONPerformanceScores",
   "calculateMarketInsights": "calculateMarketInsights",
+  "primeCache": "primeCache",
 }
 `;
 
