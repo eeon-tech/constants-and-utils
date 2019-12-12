@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.2...v1.11.3) (2019-12-12)
+
+
+### Bug Fixes
+
+* **format-numbers:** fixes number parsing error ([1502cb4](https://github.com/eeon-tech/constants-and-utils/commit/1502cb46ba4f5b2c664f1b880123cec8e8c3cdf7))
+
 ## [1.11.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.1...v1.11.2) (2019-12-11)
 
 
