@@ -59,22 +59,26 @@ exports.formatChartNumber = (rawValue) => {
  * Takes a number and formats it nicely into a human-readable string
  * e.g. 38400000000 --> 38.4B
  */
-exports.formatNumberNicely = (value = '', args = {}) => {
+exports.formatNumberNicely = (value, args = {}) => {
   const { currency, percentage, ...rest } = args
 
-  try {
-    if (currency) {
-      return numbro(value).formatCurrency(rest)
-    }
-
-    if (percentage) {
-      return numbro(value).format({ ...rest, output: 'percent' })
-    }
-
-    return numbro(value).format(rest)
-  } catch (error) {
+  if (
+    _.isNull(value) ||
+    _.isUndefined(value) ||
+    !_.isFunction(_.get(value, ['toString']))
+  ) {
     return 'N/A'
   }
+
+  if (currency) {
+    return numbro(value).formatCurrency(rest)
+  }
+
+  if (percentage) {
+    return numbro(value).format({ ...rest, output: 'percent' })
+  }
+
+  return numbro(value).format(rest)
 }
 
 exports.isEven = (value) => _.isEqual(value % 2, 0)
