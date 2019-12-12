@@ -62,15 +62,19 @@ exports.formatChartNumber = (rawValue) => {
 exports.formatNumberNicely = (value = '', args = {}) => {
   const { currency, percentage, ...rest } = args
 
-  if (currency) {
-    return numbro(value).formatCurrency(rest)
-  }
+  try {
+    if (currency) {
+      return numbro(value).formatCurrency(rest)
+    }
 
-  if (percentage) {
-    return numbro(value).format({ ...rest, output: 'percent' })
-  }
+    if (percentage) {
+      return numbro(value).format({ ...rest, output: 'percent' })
+    }
 
-  return numbro(value).format(rest)
+    return numbro(value).format(rest)
+  } catch (error) {
+    return 'N/A'
+  }
 }
 
 exports.isEven = (value) => _.isEqual(value % 2, 0)
