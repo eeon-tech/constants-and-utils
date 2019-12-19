@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.4...v1.12.0) (2019-12-19)
+
+
+### Features
+
+* **heatmap-orders:** adds categories and more metrics ([dade89a](https://github.com/eeon-tech/constants-and-utils/commit/dade89a6145ee3a6bca699f6953e6c5dcc0d24a3))
+
 ## [1.11.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.3...v1.11.4) (2019-12-12)
 
 
