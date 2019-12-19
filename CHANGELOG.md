@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.3...v1.11.4) (2019-12-12)
+
+
+### Bug Fixes
+
+* **formatters:** adds more extreme preventative checks to formatter ([438b416](https://github.com/eeon-tech/constants-and-utils/commit/438b41666406fca7a262a232b858c37398817de3))
+
 ## [1.11.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.2...v1.11.3) (2019-12-12)
 
 
