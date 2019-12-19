@@ -6,6 +6,7 @@ import {
   betaValueBuckets,
   dividendYieldValueBuckets,
   EBITDAValueBuckets,
+  employeesValueBuckets,
   marketCapValueBuckets,
   pegRatioValueBuckets,
   peRatioValueBuckets,
@@ -229,6 +230,19 @@ export const EBITDA = {
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EBITDA',
   transform: averageCurrencyTransform,
+}
+
+/**
+ * Employees
+ */
+export const employees = {
+  valueBuckets: employeesValueBuckets,
+  databaseModelName: metricRelations.KEY_STATS,
+  id: 'employees',
+  label: 'Employees',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Employees',
+  transform: averageTransform,
 }
 
 /**
@@ -675,32 +689,80 @@ export const getAlertMetricById = (id) =>
 export const heatmapOrders = {
   popular: [
     changePercent,
-    day5ChangePercent,
+    // relativeStrength,
     latestPrice,
     marketCap,
-    month1ChangePercent,
     peRatio,
-    // EEON Scores
+    // revenueGrowth
   ],
-  other: [
+  EEONScores: [],
+  performance: [
+    day5ChangePercent,
+    month1ChangePercent,
+    month3ChangePercent,
+    month6ChangePercent,
+    ytdChangePercent,
+    year1ChangePercent,
+    year2ChangePercent,
+    year5ChangePercent,
     beta,
-    dividendYield,
+    volume,
+  ],
+  analysts: [
+    // % buy
+    // valuation %
     forwardPERatio,
-    open,
-    previousClose,
-    priceToBook,
+    // forwardPriceToSales
+  ],
+  value: [
+    peRatio,
     priceToSales,
-    profitMargin,
+    // earningsYield https://www.google.com/search?q=earnings+yield&oq=earnings+yield&aqs=chrome..69i57j0l7.1861j1j7&sourceid=chrome&ie=UTF-8
+    enterpriseValue,
     revenuePerEmployee,
     revenuePerShare,
-    volume,
-    ytdChangePercent,
+    pegRatio,
+    // EV/Revenue
+    priceToBook,
+    priceToSales,
+    dividendYield,
+  ],
+  growth: [
+    // revenueGrowth
+    // epsGrowth
+  ],
+  profitability: [
+    profitMargin,
+    // ROE
+    // ROA
+  ],
+  fundamentals: [
+    revenue,
+    // netIncome
+    // totalDebt,
+    // cashFlowOps,
+    employees,
+    totalCash,
+    // operatingExpense
+    // Research & Development
+    // Total Assets
+  ],
+  sentiment: [
+    // social
+    // putToCallRatio
   ],
 }
 
 export const heatmapOrdersList = [
   ...heatmapOrders.popular,
-  ...heatmapOrders.other,
+  ...heatmapOrders.EEONScores,
+  ...heatmapOrders.performance,
+  ...heatmapOrders.analysts,
+  ...heatmapOrders.value,
+  ...heatmapOrders.growth,
+  ...heatmapOrders.profitability,
+  ...heatmapOrders.fundamentals,
+  ...heatmapOrders.sentiment,
 ]
 
 export const getHeatmapOrdersMetricById = (id) =>

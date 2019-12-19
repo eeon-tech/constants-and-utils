@@ -69,6 +69,16 @@ export const EBITDAValueBuckets = [
   createNumericValueBucket(50000000000),
 ]
 
+export const employeesValueBuckets = [
+  createNumericValueBucket(100),
+  createNumericValueBucket(1000),
+  createNumericValueBucket(5000),
+  createNumericValueBucket(10000),
+  createNumericValueBucket(25000),
+  createNumericValueBucket(50000),
+  createNumericValueBucket(100000),
+]
+
 const marketCapValueOverrides = { currency: true }
 export const marketCapValueBuckets = [
   createNumericValueBucket(50000000, 'Micro-cap', marketCapValueOverrides),
