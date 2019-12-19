@@ -724,7 +724,6 @@ export const heatmapOrders = {
     pegRatio,
     // EV/Revenue
     priceToBook,
-    priceToSales,
     dividendYield,
   ],
   growth: [
