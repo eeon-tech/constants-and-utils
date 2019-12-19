@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.12.0...v1.12.1) (2019-12-19)
+
+
+### Bug Fixes
+
+* **heatmap-orders:** removes duplicates ([1c7cbd4](https://github.com/eeon-tech/constants-and-utils/commit/1c7cbd42629922792bffdb9eed955754ac5e2264))
+
 # [1.12.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.11.4...v1.12.0) (2019-12-19)
 
 
