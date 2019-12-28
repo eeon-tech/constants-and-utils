@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.12.1...v1.13.0) (2019-12-28)
+
+
+### Features
+
+* **lists:** categorize screener metrics ([3edd8ea](https://github.com/eeon-tech/constants-and-utils/commit/3edd8ea7d416c606c72abea47a93eaff7c084a2e))
+
 ## [1.12.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.12.0...v1.12.1) (2019-12-19)
 
 
