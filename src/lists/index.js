@@ -774,48 +774,80 @@ export const getHeatmapOrdersMetricById = (id) =>
  */
 export const screenerMetrics = {
   popular: [
-    latestPrice,
     changePercent,
+    // relativeStrength
+    latestPrice,
     marketCap,
     peRatio,
-    priceToSales,
-    revenue,
-    ttmEPS,
-    volume,
-    // EEONScores
+    // revenueGrowth
   ],
-  other: [
-    avg10Volume,
-    avg30Volume,
-    beta,
-    day200MovingAvg,
-    day50MovingAvg,
+  EEONScores: [],
+  performance: [
     day5ChangePercent,
-    dividendYield,
-    EBITDA,
-    enterpriseValue,
-    forwardPERatio,
     month1ChangePercent,
     month3ChangePercent,
     month6ChangePercent,
-    pegRatio,
-    previousClose,
-    priceToBook,
-    profitMargin,
-    revenuePerEmployee,
-    revenuePerShare,
-    week52High,
-    week52Low,
+    ytdChangePercent,
     year1ChangePercent,
     year2ChangePercent,
     year5ChangePercent,
-    ytdChangePercent,
+    beta,
+    volume,
+  ],
+  analysts: [
+    // % buy
+    // valuation %
+    forwardPERatio,
+    // forwardPriceToSales
+  ],
+  value: [
+    peRatio,
+    priceToSales,
+    // earningsYield https://www.google.com/search?q=earnings+yield&oq=earnings+yield&aqs=chrome..69i57j0l7.1861j1j7&sourceid=chrome&ie=UTF-8
+    enterpriseValue,
+    revenuePerEmployee,
+    revenuePerShare,
+    pegRatio,
+    // EV/Revenue
+    priceToBook,
+    dividendYield,
+  ],
+  growth: [
+    // revenueGrowth
+    // epsGrowth
+  ],
+  profitability: [
+    profitMargin,
+    // ROE
+    // ROA
+  ],
+  fundamentals: [
+    revenue,
+    // netIncome
+    // totalDebt,
+    // cashFlowOps,
+    employees,
+    totalCash,
+    // operatingExpense
+    // Research & Development
+    // Total Assets
+  ],
+  sentiment: [
+    // social
+    // putToCallRatio
   ],
 }
 
 export const screenerMetricsList = [
   ...screenerMetrics.popular,
-  ...screenerMetrics.other,
+  ...screenerMetrics.EEONScores,
+  ...screenerMetrics.performance,
+  ...screenerMetrics.analysts,
+  ...screenerMetrics.value,
+  ...screenerMetrics.growth,
+  ...screenerMetrics.profitability,
+  ...screenerMetrics.fundamentals,
+  ...screenerMetrics.sentiment,
 ]
 
 export const getScreenerMetricById = (id) =>
