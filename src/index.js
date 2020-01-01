@@ -12,6 +12,7 @@ import * as IEX from './IEX'
 import * as insights from './insights'
 import * as jobs from './jobs'
 import * as lists from './lists'
+import * as macros from './macros'
 import * as predicates from './predicates'
 import * as scores from './scores'
 import * as search from './search'
@@ -37,6 +38,7 @@ export {
   insights,
   jobs,
   lists,
+  macros,
   predicates,
   scores,
   search,
