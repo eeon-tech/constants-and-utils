@@ -1,4 +1,6 @@
-const macros = {
+import _ from 'lodash'
+
+export const macros = {
   factors: [
     { symbol: 'IWF', label: 'Growth' },
     { symbol: 'MTUM', label: 'Momentum' },
@@ -30,3 +32,11 @@ const macros = {
     { symbol: 'XLRE', label: 'Real Estate' },
   ],
 }
+
+export const macrosList = [
+  ...macros.factors,
+  ...macros.indices,
+  ...macros.sectors,
+]
+
+export const getMacroBySymbol = (symbol) => _.find(macrosList, { symbol })
