@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.14.0...v1.15.0) (2020-01-01)
+
+
+### Features
+
+* **macros:** adds macros exports ([c4de7c6](https://github.com/eeon-tech/constants-and-utils/commit/c4de7c61d506e395d97ce1d9aa7c065f947b9e8a))
+
 # [1.14.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.13.0...v1.14.0) (2020-01-01)
 
 
