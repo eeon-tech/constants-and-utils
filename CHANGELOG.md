@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.13.0...v1.14.0) (2020-01-01)
+
+
+### Features
+
+* **macros:** adds macros with symbols and labels ([79f504d](https://github.com/eeon-tech/constants-and-utils/commit/79f504da87e8e26b215b718d16b01adb6b842faa))
+
 # [1.13.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.12.1...v1.13.0) (2019-12-28)
 
 
