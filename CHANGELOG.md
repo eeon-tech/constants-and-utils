@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.15.0...v1.16.0) (2020-01-04)
+
+
+### Features
+
+* **jobs:** adds new job types ([f6e34a5](https://github.com/eeon-tech/constants-and-utils/commit/f6e34a5e01a49c3247686641ed8ff2d29cf76e0e))
+
 # [1.15.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.14.0...v1.15.0) (2020-01-01)
 
 
