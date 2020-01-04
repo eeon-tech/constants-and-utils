@@ -8,9 +8,12 @@ Object {
 
 exports[`jobs queueNames should remain consistent 1`] = `
 Object {
+  "calculateDerivedSecurityMetrics": "calculateDerivedSecurityMetrics",
   "calculateEEONPerformanceScores": "calculateEEONPerformanceScores",
+  "calculateMacroIndicators": "calculateMacroIndicators",
   "calculateMarketInsights": "calculateMarketInsights",
   "calculateSecurityInsights": "calculateSecurityInsights",
+  "collectFinancialStatementsUponEarnings": "collectFinancialStatementsUponEarnings",
   "primeCache": "primeCache",
 }
 `;

@@ -17,8 +17,11 @@ exports.timezone = 'America/New_York'
  * Names of the jobs
  */
 exports.queueNames = utils.keymirror({
+  calculateDerivedSecurityMetrics: null,
   calculateEEONPerformanceScores: null,
+  calculateMacroIndicators: null,
   calculateMarketInsights: null,
   calculateSecurityInsights: null,
+  collectFinancialStatementsUponEarnings: null,
   primeCache: null,
 })
