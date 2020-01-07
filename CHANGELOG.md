@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.16.0...v1.17.0) (2020-01-07)
+
+
+### Features
+
+* **macros:** adds type label to the macros ([2cfde40](https://github.com/eeon-tech/constants-and-utils/commit/2cfde4023741d54290aec7345960f54c16711ada))
+
 # [1.16.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.15.0...v1.16.0) (2020-01-04)
 
 
