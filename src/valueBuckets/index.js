@@ -46,6 +46,22 @@ export const dividendYieldValueBuckets = [
   createPercentageValueBucket(0.08),
 ]
 
+export const earningsYieldValueBuckets = [
+  createPercentageValueBucket(-0.5),
+  createPercentageValueBucket(-0.4),
+  createPercentageValueBucket(-0.3),
+  createPercentageValueBucket(-0.2),
+  createPercentageValueBucket(-0.1),
+  createPercentageValueBucket(-0.05),
+  createPercentageValueBucket(0),
+  createPercentageValueBucket(0.05),
+  createPercentageValueBucket(0.1),
+  createPercentageValueBucket(0.2),
+  createPercentageValueBucket(0.3),
+  createPercentageValueBucket(0.4),
+  createPercentageValueBucket(0.5),
+]
+
 export const EBITDAValueBuckets = [
   createNumericValueBucket(0, 'Profitable'),
   createNumericValueBucket(1000000),
@@ -67,6 +83,20 @@ export const EBITDAValueBuckets = [
   createNumericValueBucket(10000000000),
   createNumericValueBucket(25000000000),
   createNumericValueBucket(50000000000),
+]
+
+export const EEONScoresValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(10),
+  createNumericValueBucket(20),
+  createNumericValueBucket(30),
+  createNumericValueBucket(40),
+  createNumericValueBucket(50),
+  createNumericValueBucket(60),
+  createNumericValueBucket(70),
+  createNumericValueBucket(80),
+  createNumericValueBucket(90),
+  createNumericValueBucket(100),
 ]
 
 export const employeesValueBuckets = [
@@ -238,6 +268,20 @@ export const revenuePerShareValueBuckets = [
   createNumericValueBucket(250, null, revenuePerShareValueBucketOverrides),
   createNumericValueBucket(500, null, revenuePerShareValueBucketOverrides),
   createNumericValueBucket(1000, null, revenuePerShareValueBucketOverrides),
+]
+
+export const RSIValueBuckets = [
+  createNumericValueBucket(0),
+  createNumericValueBucket(10),
+  createNumericValueBucket(20),
+  createNumericValueBucket(30),
+  createNumericValueBucket(40),
+  createNumericValueBucket(50),
+  createNumericValueBucket(60),
+  createNumericValueBucket(70),
+  createNumericValueBucket(80),
+  createNumericValueBucket(90),
+  createNumericValueBucket(100),
 ]
 
 export const ttmEPSValueBuckets = [

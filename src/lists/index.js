@@ -5,7 +5,9 @@ import { formatNumberNicely } from '../formatNumbers'
 import {
   betaValueBuckets,
   dividendYieldValueBuckets,
+  earningsYieldValueBuckets,
   EBITDAValueBuckets,
+  EEONScoresValueBuckets,
   employeesValueBuckets,
   marketCapValueBuckets,
   pegRatioValueBuckets,
@@ -17,6 +19,7 @@ import {
   revenueValueBuckets,
   revenuePerEmployeeValueBuckets,
   revenuePerShareValueBuckets,
+  RSIValueBuckets,
   ttmEPSValueBuckets,
   volumeValueBuckets,
 } from '../valueBuckets'
@@ -35,6 +38,8 @@ const { BASIC, PROFESSIONAL } = subscriptionPlans.stripePlans
  */
 export const metricRelations = {
   ADVANCED_STATS: 'AdvancedStats',
+  DERIVED_SECURITY_METRICS: 'DerivedSecurityMetrics',
+  EEON_PERFORMANCE_SCORES: 'EEONPerformanceScores',
   KEY_STATS: 'KeyStats',
   QUOTE: 'Quote',
 }
@@ -145,6 +150,19 @@ export const currentDebt = {
 }
 
 /**
+ * 14 Day RSI
+ */
+export const day14RSI = {
+  valueBuckets: RSIValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'day14RSI',
+  label: '14 Day RSI',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'RSI',
+  transform: averageTransform,
+}
+
+/**
  * 30 Day Percent Change
  */
 export const day30ChangePercent = {
@@ -220,6 +238,19 @@ export const dividendYield = {
 }
 
 /**
+ * Earnings Yield
+ */
+export const earningsYield = {
+  valueBuckets: earningsYieldValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'earningsYield',
+  label: 'Earnings Yield',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'Earnings Yield',
+  transform: percentageTransform,
+}
+
+/**
  * EBITDA
  */
 export const EBITDA = {
@@ -230,6 +261,84 @@ export const EBITDA = {
   requiresPlan: [BASIC, PROFESSIONAL],
   shortLabel: 'EBITDA',
   transform: averageCurrencyTransform,
+}
+
+/**
+ * EEON Growth Score
+ */
+export const EEONGrowthScore = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'growthScore',
+  label: 'EEON Growth Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Growth Score',
+  transform: averageTransform,
+}
+
+/**
+ * EEON Momentum Score
+ */
+export const EEONMomentumScore = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'momentumScore',
+  label: 'EEON Momentum Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Momentum Score',
+  transform: averageTransform,
+}
+
+/**
+ * EEON Profitability Score
+ */
+export const EEONProfitabilityScore = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'profitabilityScore',
+  label: 'EEON Profitability Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Profitability Score',
+  transform: averageTransform,
+}
+
+/**
+ * EEON Rule of 40 Score
+ */
+export const EEONRuleOf40Score = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'ruleOf40Score',
+  label: 'EEON Rule of 40 Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Rule of 40 Score',
+  transform: averageTransform,
+}
+
+/**
+ * EEON Safety Score
+ */
+export const EEONSafetyScore = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'safetyScore',
+  label: 'EEON Safety Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Safety Score',
+  transform: averageTransform,
+}
+
+/**
+ * EEON Value Score
+ */
+export const EEONValueScore = {
+  valueBuckets: EEONScoresValueBuckets,
+  databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
+  id: 'valueScore',
+  label: 'EEON Value Score',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'Value Score',
+  transform: averageTransform,
 }
 
 /**
@@ -558,6 +667,32 @@ export const totalRevenue = {
 }
 
 /**
+ * Return on Assets (TTM)
+ */
+const ttmReturnOnAssets = {
+  valueBuckets: percentageValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'ttmReturnOnAssets',
+  label: 'Return on Assets (TTM)',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'ROA (TTM)',
+  transform: percentageTransform,
+}
+
+/**
+ * Return on Assets (TTM)
+ */
+const ttmReturnOnEquity = {
+  valueBuckets: percentageValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'ttmReturnOnEquity',
+  label: 'Return on Equity (TTM)',
+  requiresPlan: [PROFESSIONAL],
+  shortLabel: 'ROE (TTM)',
+  transform: percentageTransform,
+}
+
+/**
  * Volume
  */
 export const volume = {
@@ -662,6 +797,32 @@ export const ytdChangePercent = {
 }
 
 /**
+ * YoY EPS Growth
+ */
+export const YoYEPSGrowth = {
+  valueBuckets: percentageValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'YoYEPSGrowth',
+  label: 'YoY EPS Growth',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'YoY EPS Grow',
+  transform: percentageTransform,
+}
+
+/**
+ * YoY Revenue Growth
+ */
+const YoYRevenueGrowth = {
+  valueBuckets: percentageValueBuckets,
+  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  id: 'YoYRevenueGrowth',
+  label: 'YoY Revenue Growth',
+  requiresPlan: [BASIC, PROFESSIONAL],
+  shortLabel: 'YoY Rev. Grow',
+  transform: percentageTransform,
+}
+
+/**
  * ====================
  * Available Alerting Metrics
  * ====================
@@ -680,6 +841,51 @@ export const alertMetricsList = _.toArray(alertMetrics)
 
 export const getAlertMetricById = (id) =>
   alertMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+
+export default screenableMetrics = {
+  popular: [
+    changePercent,
+    latestPrice,
+    marketCap,
+    peRatio,
+    day14RSI,
+    YoYRevenueGrowth,
+    revenue,
+  ],
+  EEONScores: [
+    EEONGrowthScore,
+    EEONMomentumScore,
+    EEONRuleOf40Score,
+    EEONValueScore,
+    EEONProfitabilityScore,
+    EEONSafetyScore,
+  ],
+  performance: [
+    day5ChangePercent,
+    month1ChangePercent,
+    month3ChangePercent,
+    month6ChangePercent,
+    ytdChangePercent,
+    year1ChangePercent,
+    year2ChangePercent,
+    year5ChangePercent,
+    beta,
+    volume,
+  ],
+  value: [
+    dividendYield,
+    forwardPERatio,
+    pegRatio,
+    priceToSales,
+    priceToBook,
+    earningsYield,
+    enterpriseValue,
+    revenuePerEmployee,
+    revenuePerShare,
+  ],
+  profitability: [profitMargin, ttmReturnOnAssets, ttmReturnOnEquity],
+  fundamentals: [revenue, totalCash],
+}
 
 /**
  * ====================
