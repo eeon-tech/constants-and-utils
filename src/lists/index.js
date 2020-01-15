@@ -69,6 +69,11 @@ export const currencyTransform = (value = 0) =>
 export const percentageTransform = (value = 0) =>
   formatNumberNicely(value, { mantissa: 2, percentage: true })
 
+export const percentageValueTransform = (value = 0) => {
+  const toValue = _.multiply(value, 100)
+  return formatNumberNicely(toValue, { mantissa: 0 })
+}
+
 export const ratioTransform = (value = 0) =>
   formatNumberNicely(value, { mantissa: 2 })
 
@@ -279,7 +284,7 @@ export const EEONGrowthScore = {
   label: 'EEON Growth Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Growth Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
@@ -293,7 +298,7 @@ export const EEONMomentumScore = {
   label: 'EEON Momentum Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Momentum Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
@@ -307,7 +312,7 @@ export const EEONProfitabilityScore = {
   label: 'EEON Profitability Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Profitability Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
@@ -321,7 +326,7 @@ export const EEONRuleOf40Score = {
   label: 'EEON Rule of 40 Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Rule of 40 Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
@@ -335,7 +340,7 @@ export const EEONSafetyScore = {
   label: 'EEON Safety Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Safety Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
@@ -349,7 +354,7 @@ export const EEONValueScore = {
   label: 'EEON Value Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Value Score',
-  transform: percentageTransform,
+  transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
 
