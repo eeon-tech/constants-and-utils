@@ -273,7 +273,7 @@ export const EEONGrowthScore = {
   label: 'EEON Growth Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Growth Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**
@@ -286,7 +286,7 @@ export const EEONMomentumScore = {
   label: 'EEON Momentum Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Momentum Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**
@@ -299,7 +299,7 @@ export const EEONProfitabilityScore = {
   label: 'EEON Profitability Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Profitability Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**
@@ -312,7 +312,7 @@ export const EEONRuleOf40Score = {
   label: 'EEON Rule of 40 Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Rule of 40 Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**
@@ -325,7 +325,7 @@ export const EEONSafetyScore = {
   label: 'EEON Safety Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Safety Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**
@@ -338,7 +338,7 @@ export const EEONValueScore = {
   label: 'EEON Value Score',
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Value Score',
-  transform: averageTransform,
+  transform: percentageTransform,
 }
 
 /**

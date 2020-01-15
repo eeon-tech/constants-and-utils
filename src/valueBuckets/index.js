@@ -13,6 +13,15 @@ export const createPercentageValueBucket = (value, label) => ({
   value,
 })
 
+const createEEONPerformanceScoreValueBucket = (value, label) => ({
+  formattedValue: formatNumbers.formatNumberNicely(value, {
+    percentage: true,
+    mantissa: 0,
+  }),
+  label,
+  value,
+})
+
 export const createNumericValueBucket = (
   value,
   label,
@@ -86,17 +95,17 @@ export const EBITDAValueBuckets = [
 ]
 
 export const EEONPerformanceScoresValueBuckets = [
-  createNumericValueBucket(0),
-  createNumericValueBucket(10),
-  createNumericValueBucket(20),
-  createNumericValueBucket(30),
-  createNumericValueBucket(40),
-  createNumericValueBucket(50),
-  createNumericValueBucket(60),
-  createNumericValueBucket(70),
-  createNumericValueBucket(80),
-  createNumericValueBucket(90),
-  createNumericValueBucket(100),
+  createEEONPerformanceScoreValueBucket(0),
+  createEEONPerformanceScoreValueBucket(0.1),
+  createEEONPerformanceScoreValueBucket(0.2),
+  createEEONPerformanceScoreValueBucket(0.3),
+  createEEONPerformanceScoreValueBucket(0.4),
+  createEEONPerformanceScoreValueBucket(0.5),
+  createEEONPerformanceScoreValueBucket(0.6),
+  createEEONPerformanceScoreValueBucket(0.7),
+  createEEONPerformanceScoreValueBucket(0.8),
+  createEEONPerformanceScoreValueBucket(0.9),
+  createEEONPerformanceScoreValueBucket(1),
 ]
 
 export const employeesValueBuckets = [
