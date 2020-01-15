@@ -7,7 +7,7 @@ import {
   dividendYieldValueBuckets,
   earningsYieldValueBuckets,
   EBITDAValueBuckets,
-  EEONScoresValueBuckets,
+  EEONPerformanceScoresValueBuckets,
   employeesValueBuckets,
   marketCapValueBuckets,
   pegRatioValueBuckets,
@@ -38,8 +38,8 @@ const { BASIC, PROFESSIONAL } = subscriptionPlans.stripePlans
  */
 export const metricRelations = {
   ADVANCED_STATS: 'AdvancedStats',
-  DERIVED_SECURITY_METRICS: 'DerivedSecurityMetrics',
-  EEON_PERFORMANCE_SCORES: 'EEONPerformanceScores',
+  DERIVED_SECURITY_METRICS: 'DerivedSecurityMetric',
+  EEON_PERFORMANCE_SCORES: 'EEONPerformanceScore',
   KEY_STATS: 'KeyStats',
   QUOTE: 'Quote',
 }
@@ -267,7 +267,7 @@ export const EBITDA = {
  * EEON Growth Score
  */
 export const EEONGrowthScore = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'growthScore',
   label: 'EEON Growth Score',
@@ -280,7 +280,7 @@ export const EEONGrowthScore = {
  * EEON Momentum Score
  */
 export const EEONMomentumScore = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'momentumScore',
   label: 'EEON Momentum Score',
@@ -293,7 +293,7 @@ export const EEONMomentumScore = {
  * EEON Profitability Score
  */
 export const EEONProfitabilityScore = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'profitabilityScore',
   label: 'EEON Profitability Score',
@@ -306,7 +306,7 @@ export const EEONProfitabilityScore = {
  * EEON Rule of 40 Score
  */
 export const EEONRuleOf40Score = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'ruleOf40Score',
   label: 'EEON Rule of 40 Score',
@@ -319,7 +319,7 @@ export const EEONRuleOf40Score = {
  * EEON Safety Score
  */
 export const EEONSafetyScore = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'safetyScore',
   label: 'EEON Safety Score',
@@ -332,7 +332,7 @@ export const EEONSafetyScore = {
  * EEON Value Score
  */
 export const EEONValueScore = {
-  valueBuckets: EEONScoresValueBuckets,
+  valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'valueScore',
   label: 'EEON Value Score',
@@ -851,7 +851,7 @@ export const screenableMetrics = {
     YoYEPSGrowth,
     revenue,
   ],
-  EEONScores: [
+  EEONPerformanceScores: [
     EEONGrowthScore,
     EEONMomentumScore,
     EEONRuleOf40Score,

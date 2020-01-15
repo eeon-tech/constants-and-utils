@@ -85,7 +85,7 @@ export const EBITDAValueBuckets = [
   createNumericValueBucket(50000000000),
 ]
 
-export const EEONScoresValueBuckets = [
+export const EEONPerformanceScoresValueBuckets = [
   createNumericValueBucket(0),
   createNumericValueBucket(10),
   createNumericValueBucket(20),
