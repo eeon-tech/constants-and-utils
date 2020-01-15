@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.20.0...v1.20.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **scores:** creates new average transform for scores ([5385f78](https://github.com/eeon-tech/constants-and-utils/commit/5385f78588310162cd518aa22dca85561aced5a4))
+
 # [1.20.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.19.1...v1.20.0) (2020-01-15)
 
 
