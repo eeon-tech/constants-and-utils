@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.18.0...v1.18.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **scores:** fixes score database model reference ([0636fae](https://github.com/eeon-tech/constants-and-utils/commit/0636faeb807fe69d9313bbb0957e1505533a11fa))
+
 # [1.18.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.17.0...v1.18.0) (2020-01-15)
 
 
