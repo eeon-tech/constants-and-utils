@@ -1,18 +1,18 @@
 const lists = require('./index')
 
 describe('lists', () => {
-  describe('getHeatmapOrdersMetricById', () => {
+  describe('getScreenableMetricById', () => {
     it('should retrieve an existing metric', () => {
-      expect(lists.getHeatmapOrdersMetricById(lists.forwardPERatio.id)).toEqual(
+      expect(lists.getScreenableMetricById(lists.forwardPERatio.id)).toEqual(
         lists.forwardPERatio
       )
-      expect(lists.getHeatmapOrdersMetricById(lists.latestPrice.id)).toEqual(
+      expect(lists.getScreenableMetricById(lists.latestPrice.id)).toEqual(
         lists.latestPrice
       )
     })
 
     it('should handle a non-existing metric id by defaulting to changePercent', () => {
-      expect(lists.getHeatmapOrdersMetricById('nonexistent')).toEqual(
+      expect(lists.getScreenableMetricById('nonexistent')).toEqual(
         lists.changePercent
       )
     })

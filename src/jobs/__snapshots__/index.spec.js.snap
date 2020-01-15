@@ -15,6 +15,7 @@ Object {
   "calculateSecurityInsights": "calculateSecurityInsights",
   "collectFinancialStatementsUponEarnings": "collectFinancialStatementsUponEarnings",
   "primeCache": "primeCache",
+  "runPreMarketJobs": "runPreMarketJobs",
 }
 `;
 

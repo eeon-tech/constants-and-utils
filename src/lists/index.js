@@ -827,22 +827,20 @@ const YoYRevenueGrowth = {
  * Available Alerting Metrics
  * ====================
  */
-export const alertMetrics = {
-  latestPrice,
-  change,
+export const alertMetrics = [
   changePercent,
-  volume,
+  change,
+  latestPrice,
   marketCap,
   peRatio,
-  // EEON Scores
-}
-
-export const alertMetricsList = _.toArray(alertMetrics)
+  day14RSI,
+  peRatio,
+]
 
 export const getAlertMetricById = (id) =>
-  alertMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+  alertMetrics.find((item) => _.isEqual(item.id, id)) || changePercent
 
-export default screenableMetrics = {
+export const screenableMetrics = {
   popular: [
     changePercent,
     latestPrice,
@@ -850,6 +848,7 @@ export default screenableMetrics = {
     peRatio,
     day14RSI,
     YoYRevenueGrowth,
+    YoYEPSGrowth,
     revenue,
   ],
   EEONScores: [
@@ -872,6 +871,7 @@ export default screenableMetrics = {
     beta,
     volume,
   ],
+  profitability: [profitMargin, ttmReturnOnAssets, ttmReturnOnEquity],
   value: [
     dividendYield,
     forwardPERatio,
@@ -883,181 +883,21 @@ export default screenableMetrics = {
     revenuePerEmployee,
     revenuePerShare,
   ],
-  profitability: [profitMargin, ttmReturnOnAssets, ttmReturnOnEquity],
-  fundamentals: [revenue, totalCash],
+  // cashFlowOps
+  // employees
+  // enterpriseValue/revenue
+  // netIncome
+  // operatingExpense
+  // Research & Development
+  // totalAssets
+  // totalCash
+  // totalDebt
 }
 
-/**
- * ====================
- * Available sort orders for heatmap
- * ====================
- */
-export const heatmapOrders = {
-  popular: [
-    changePercent,
-    // relativeStrength,
-    latestPrice,
-    marketCap,
-    peRatio,
-    // revenueGrowth
-  ],
-  EEONScores: [],
-  performance: [
-    day5ChangePercent,
-    month1ChangePercent,
-    month3ChangePercent,
-    month6ChangePercent,
-    ytdChangePercent,
-    year1ChangePercent,
-    year2ChangePercent,
-    year5ChangePercent,
-    beta,
-    volume,
-  ],
-  analysts: [
-    // % buy
-    // valuation %
-    forwardPERatio,
-    // forwardPriceToSales
-  ],
-  value: [
-    peRatio,
-    priceToSales,
-    // earningsYield https://www.google.com/search?q=earnings+yield&oq=earnings+yield&aqs=chrome..69i57j0l7.1861j1j7&sourceid=chrome&ie=UTF-8
-    enterpriseValue,
-    revenuePerEmployee,
-    revenuePerShare,
-    pegRatio,
-    // EV/Revenue
-    priceToBook,
-    dividendYield,
-  ],
-  growth: [
-    // revenueGrowth
-    // epsGrowth
-  ],
-  profitability: [
-    profitMargin,
-    // ROE
-    // ROA
-  ],
-  fundamentals: [
-    revenue,
-    // netIncome
-    // totalDebt,
-    // cashFlowOps,
-    employees,
-    totalCash,
-    // operatingExpense
-    // Research & Development
-    // Total Assets
-  ],
-  sentiment: [
-    // social
-    // putToCallRatio
-  ],
-}
+const screenableMetricsList = _.flatten(_.values(screenableMetrics))
 
-export const heatmapOrdersList = [
-  ...heatmapOrders.popular,
-  ...heatmapOrders.EEONScores,
-  ...heatmapOrders.performance,
-  ...heatmapOrders.analysts,
-  ...heatmapOrders.value,
-  ...heatmapOrders.growth,
-  ...heatmapOrders.profitability,
-  ...heatmapOrders.fundamentals,
-  ...heatmapOrders.sentiment,
-]
-
-export const getHeatmapOrdersMetricById = (id) =>
-  heatmapOrdersList.find((item) => _.isEqual(item.id, id)) || changePercent
-
-/**
- * ====================
- * Available filters for screeners
- * ====================
- */
-export const screenerMetrics = {
-  popular: [
-    changePercent,
-    // relativeStrength
-    latestPrice,
-    marketCap,
-    peRatio,
-    // revenueGrowth
-  ],
-  EEONScores: [],
-  performance: [
-    day5ChangePercent,
-    month1ChangePercent,
-    month3ChangePercent,
-    month6ChangePercent,
-    ytdChangePercent,
-    year1ChangePercent,
-    year2ChangePercent,
-    year5ChangePercent,
-    beta,
-    volume,
-  ],
-  analysts: [
-    // % buy
-    // valuation %
-    forwardPERatio,
-    // forwardPriceToSales
-  ],
-  value: [
-    peRatio,
-    priceToSales,
-    // earningsYield https://www.google.com/search?q=earnings+yield&oq=earnings+yield&aqs=chrome..69i57j0l7.1861j1j7&sourceid=chrome&ie=UTF-8
-    enterpriseValue,
-    revenuePerEmployee,
-    revenuePerShare,
-    pegRatio,
-    // EV/Revenue
-    priceToBook,
-    dividendYield,
-  ],
-  growth: [
-    // revenueGrowth
-    // epsGrowth
-  ],
-  profitability: [
-    profitMargin,
-    // ROE
-    // ROA
-  ],
-  fundamentals: [
-    revenue,
-    // netIncome
-    // totalDebt,
-    // cashFlowOps,
-    employees,
-    totalCash,
-    // operatingExpense
-    // Research & Development
-    // Total Assets
-  ],
-  sentiment: [
-    // social
-    // putToCallRatio
-  ],
-}
-
-export const screenerMetricsList = [
-  ...screenerMetrics.popular,
-  ...screenerMetrics.EEONScores,
-  ...screenerMetrics.performance,
-  ...screenerMetrics.analysts,
-  ...screenerMetrics.value,
-  ...screenerMetrics.growth,
-  ...screenerMetrics.profitability,
-  ...screenerMetrics.fundamentals,
-  ...screenerMetrics.sentiment,
-]
-
-export const getScreenerMetricById = (id) =>
-  screenerMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+export const getScreenableMetricById = (id) =>
+  screenableMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
 
 /**
  * List types

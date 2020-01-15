@@ -24,4 +24,5 @@ exports.queueNames = utils.keymirror({
   calculateSecurityInsights: null,
   collectFinancialStatementsUponEarnings: null,
   primeCache: null,
+  runPreMarketJobs: null,
 })

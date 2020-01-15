@@ -10,6 +10,7 @@ exports.cachePeriodsInMS = {
   '1D': convertToMS(86400),
   '5D': convertToMS(432000),
   '10D': convertToMS(864000),
+  '14D': convertToMS(1209600),
   '1M': convertToMS(2592000),
   '6M': convertToMS(15552000),
 }
