@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.19.0...v1.19.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **lists:** adds technical indicators relation ([fb19266](https://github.com/eeon-tech/constants-and-utils/commit/fb19266da3255496c4fee4631452d429e98a01e4))
+
 # [1.19.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.18.1...v1.19.0) (2020-01-15)
 
 
