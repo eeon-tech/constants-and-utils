@@ -1,3 +1,11 @@
+## [1.21.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.1...v1.21.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* **jobs:** fixes job name with build ([8a7bf7b](https://github.com/eeon-tech/constants-and-utils/commit/8a7bf7b9509755d388a8b1713d6ab754c422fea9))
+* **jobs:** fixes name of job ([37db554](https://github.com/eeon-tech/constants-and-utils/commit/37db5541017dfa16c05006ce835ae5d51c102971))
+
 ## [1.21.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.0...v1.21.1) (2020-01-15)
 
 
