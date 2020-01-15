@@ -101,7 +101,11 @@ exports.suffixValueWithPercentSymbol = (value) =>
  * Takes a string and unformats it into a raw number
  * e.g. 38B --> 38000000000
  */
-exports.unformatNiceNumber = (value = '') => {
+exports.unformatNiceNumber = (value = '', { unformatter } = {}) => {
+  if (_.isFunction(unformatter)) {
+    return unformatter(value)
+  }
+
   const uppercased = _.toUpper(value)
 
   // We have to do this because of the Byte formatter in Numbro

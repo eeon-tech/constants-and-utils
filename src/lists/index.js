@@ -75,6 +75,11 @@ export const ratioTransform = (value = 0) =>
 export const volumeTransform = (value = 0) =>
   formatNumberNicely(value, { average: true, totalLength: 4 })
 
+export const EEONPerformanceScoreUnformatter = _fp.pipe(
+  _fp.toNumber,
+  (number) => _.divide(number, 100)
+)
+
 /**
  * 10 Day Average Trading Volume
  */
@@ -275,6 +280,7 @@ export const EEONGrowthScore = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Growth Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**
@@ -288,6 +294,7 @@ export const EEONMomentumScore = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Momentum Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**
@@ -301,6 +308,7 @@ export const EEONProfitabilityScore = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Profitability Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**
@@ -314,6 +322,7 @@ export const EEONRuleOf40Score = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Rule of 40 Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**
@@ -327,6 +336,7 @@ export const EEONSafetyScore = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Safety Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**
@@ -340,6 +350,7 @@ export const EEONValueScore = {
   requiresPlan: [PROFESSIONAL],
   shortLabel: 'Value Score',
   transform: percentageTransform,
+  unformatter: EEONPerformanceScoreUnformatter,
 }
 
 /**

@@ -2,6 +2,7 @@
  * Pre-defined value buckets for Alert and Screener Criteria
  * These are solely values, predicates are separate and can be applied to a bucket
  */
+import _ from 'lodash'
 import formatNumbers from '../formatNumbers'
 
 export const createPercentageValueBucket = (value, label) => ({
@@ -13,11 +14,8 @@ export const createPercentageValueBucket = (value, label) => ({
   value,
 })
 
-const createEEONPerformanceScoreValueBucket = (value, label) => ({
-  formattedValue: formatNumbers.formatNumberNicely(value, {
-    percentage: true,
-    mantissa: 0,
-  }),
+export const createEEONPerformanceScoreValueBucket = (value, label) => ({
+  formattedValue: _.toString(_.multiply(value, 100)),
   label,
   value,
 })
