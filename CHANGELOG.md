@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.18.1...v1.19.0) (2020-01-15)
+
+
+### Features
+
+* **eeon-scores:** adds better value buckets ([43e8ef5](https://github.com/eeon-tech/constants-and-utils/commit/43e8ef537e04ab671a9dfd02169836abc5a153f0))
+
 ## [1.18.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.18.0...v1.18.1) (2020-01-15)
 
 
