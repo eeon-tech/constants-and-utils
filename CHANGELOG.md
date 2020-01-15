@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.17.0...v1.18.0) (2020-01-15)
+
+
+### Features
+
+* **lists:** adds a universal screen and sort metric list ([0cb05d9](https://github.com/eeon-tech/constants-and-utils/commit/0cb05d9f9bdc868ebe3d3dc43cee372970a9e647))
+* **lists:** collates screener and heatmap metrics together ([fb928d7](https://github.com/eeon-tech/constants-and-utils/commit/fb928d7088b8fd7bb64490513011ce4939898d48))
+
 # [1.17.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.16.0...v1.17.0) (2020-01-07)
 
 
