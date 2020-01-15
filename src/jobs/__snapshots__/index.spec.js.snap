@@ -14,9 +14,10 @@ Object {
   "calculateMarketInsights": "calculateMarketInsights",
   "calculateSecurityInsights": "calculateSecurityInsights",
   "collectFinancialStatementsUponEarnings": "collectFinancialStatementsUponEarnings",
-  "generateUserSecurityAlerts": "generateUserSecurityAlerts",
   "primeCache": "primeCache",
   "runPreMarketJobs": "runPreMarketJobs",
+  "sendUserSecurityAlertMessages": "sendUserSecurityAlertMessages",
+  "triggerUserSecurityAlertMessages": "triggerUserSecurityAlertMessages",
 }
 `;
 
