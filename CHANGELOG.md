@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.0...v1.21.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* **jobs:** renames user security alert jobs ([4f9e81b](https://github.com/eeon-tech/constants-and-utils/commit/4f9e81bf9311ea03a6b93195740f8c2aa3b8758a))
+
 # [1.21.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.20.1...v1.21.0) (2020-01-15)
 
 
