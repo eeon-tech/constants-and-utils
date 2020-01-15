@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.19.1...v1.20.0) (2020-01-15)
+
+
+### Features
+
+* **unformatter:** adds custom unformatter rule ([2b7252e](https://github.com/eeon-tech/constants-and-utils/commit/2b7252ec408af88b6f95462d7ce1d52bc908b485))
+
 ## [1.19.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.19.0...v1.19.1) (2020-01-15)
 
 
