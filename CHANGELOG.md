@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.20.1...v1.21.0) (2020-01-15)
+
+
+### Features
+
+* **jobs:** adds new job for generating user security alerts ([ce6d257](https://github.com/eeon-tech/constants-and-utils/commit/ce6d257e0e5f48e3a885a6e5de64ef8764ad2885))
+
 ## [1.20.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.20.0...v1.20.1) (2020-01-15)
 
 
