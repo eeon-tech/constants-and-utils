@@ -42,6 +42,7 @@ export const metricRelations = {
   EEON_PERFORMANCE_SCORES: 'EEONPerformanceScore',
   KEY_STATS: 'KeyStats',
   QUOTE: 'Quote',
+  TECHNICAL_INDICATORS: 'TechnicalIndicator',
 }
 
 /**
@@ -154,7 +155,7 @@ export const currentDebt = {
  */
 export const day14RSI = {
   valueBuckets: RSIValueBuckets,
-  databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
+  databaseModelName: metricRelations.TECHNICAL_INDICATORS,
   id: 'day14RSI',
   label: '14 Day RSI',
   requiresPlan: [BASIC, PROFESSIONAL],
