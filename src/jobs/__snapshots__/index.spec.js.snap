@@ -17,7 +17,7 @@ Object {
   "primeCache": "primeCache",
   "runPreMarketJobs": "runPreMarketJobs",
   "sendUserSecurityAlertMessages": "sendUserSecurityAlertMessages",
-  "triggerUserSecurityAlertMessages": "triggerUserSecurityAlertMessages",
+  "triggerUserSecurityAlerts": "triggerUserSecurityAlerts",
 }
 `;
 

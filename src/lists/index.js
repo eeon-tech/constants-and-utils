@@ -829,7 +829,7 @@ export const YoYEPSGrowth = {
 /**
  * YoY Revenue Growth
  */
-const YoYRevenueGrowth = {
+export const YoYRevenueGrowth = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'YoYRevenueGrowth',
