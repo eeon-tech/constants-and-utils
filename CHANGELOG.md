@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.22.0...v1.23.0) (2020-01-17)
+
+
+### Features
+
+* **jobs:** adds job for sending realtime securities ([31467d6](https://github.com/eeon-tech/constants-and-utils/commit/31467d6f566840c8f618f3e363cd2604f3df7850))
+
 # [1.22.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.2...v1.22.0) (2020-01-16)
 
 
