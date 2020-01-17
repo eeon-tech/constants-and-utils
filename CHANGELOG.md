@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.2...v1.22.0) (2020-01-16)
+
+
+### Features
+
+* **lists:** fixes metric export ([024cd32](https://github.com/eeon-tech/constants-and-utils/commit/024cd3299d9180f79952da41a3249b35889973eb))
+
 ## [1.21.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.21.1...v1.21.2) (2020-01-15)
 
 
