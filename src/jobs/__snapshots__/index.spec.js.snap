@@ -16,6 +16,7 @@ Object {
   "collectFinancialStatementsUponEarnings": "collectFinancialStatementsUponEarnings",
   "primeCache": "primeCache",
   "runPreMarketJobs": "runPreMarketJobs",
+  "sendRealtimeSecurities": "sendRealtimeSecurities",
   "sendUserSecurityAlertMessages": "sendUserSecurityAlertMessages",
   "triggerUserSecurityAlerts": "triggerUserSecurityAlerts",
 }
