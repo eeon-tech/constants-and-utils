@@ -686,7 +686,7 @@ export const totalRevenue = {
 /**
  * Return on Assets (TTM)
  */
-const ttmReturnOnAssets = {
+export const ttmReturnOnAssets = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'ttmReturnOnAssets',
@@ -699,7 +699,7 @@ const ttmReturnOnAssets = {
 /**
  * Return on Assets (TTM)
  */
-const ttmReturnOnEquity = {
+export const ttmReturnOnEquity = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'ttmReturnOnEquity',
