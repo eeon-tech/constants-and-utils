@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.23.0...v1.24.0) (2020-02-12)
+
+
+### Features
+
+* **cache:** adds 15m cache period ([8bda68f](https://github.com/eeon-tech/constants-and-utils/commit/8bda68f811caad2e5f740718bfdb65d1e5c3459e))
+
 # [1.23.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.22.0...v1.23.0) (2020-01-17)
 
 
