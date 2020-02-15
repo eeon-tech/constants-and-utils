@@ -8,12 +8,9 @@ const macroTypes = {
 
 export const macros = {
   factors: [
-    { symbol: 'IWF', label: 'Growth', type: macroTypes.FACTOR },
     { symbol: 'MTUM', label: 'Momentum', type: macroTypes.FACTOR },
-    { symbol: 'USMV', label: 'Low Volatility', type: macroTypes.FACTOR },
     { symbol: 'VB', label: 'Small Cap.', type: macroTypes.FACTOR },
     { symbol: 'VIG', label: 'Dividend Appreciation', type: macroTypes.FACTOR },
-    { symbol: 'VTI', label: 'Total Stock Market', type: macroTypes.FACTOR },
     { symbol: 'VTV', label: 'Value', type: macroTypes.FACTOR },
     { symbol: 'VUG', label: 'Large Cap Growth', type: macroTypes.FACTOR },
     { symbol: 'VYM', label: 'High Dividend', type: macroTypes.FACTOR },
@@ -22,7 +19,9 @@ export const macros = {
     { symbol: 'SPY', label: 'S&P 500', type: macroTypes.INDEX },
     { symbol: 'DIA', label: 'Dow Jones', type: macroTypes.INDEX },
     { symbol: 'IWM', label: 'Russell 2K', type: macroTypes.INDEX },
+    { symbol: 'IWF', label: 'Russell 1K', type: macroTypes.INDEX },
     { symbol: 'QQQ', label: 'NASDAQ 100 ', type: macroTypes.INDEX },
+    { symbol: 'VTI', label: 'Total Stock Market', type: macroTypes.INDEX },
   ],
   sectors: [
     { symbol: 'XLB', label: 'Materials', type: macroTypes.SECTOR },
@@ -36,6 +35,7 @@ export const macros = {
     { symbol: 'XLU', label: 'Utilities', type: macroTypes.SECTOR },
     { symbol: 'XLK', label: 'Technology', type: macroTypes.SECTOR },
     { symbol: 'XLRE', label: 'Real Estate', type: macroTypes.SECTOR },
+    { symbol: 'GDX', label: 'Gold', type: macroTypes.SECTOR },
   ],
 }
 
