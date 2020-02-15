@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.0...v1.24.1) (2020-02-15)
+
+
+### Bug Fixes
+
+* **macros:** swaps indices, factors, and sectors for better balance ([c8005b2](https://github.com/eeon-tech/constants-and-utils/commit/c8005b27b3b8ed147f3462bdffb94bcbe4bd00cd))
+
 # [1.24.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.23.0...v1.24.0) (2020-02-12)
 
 
