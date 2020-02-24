@@ -1,3 +1,10 @@
+## [1.24.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.1...v1.24.2) (2020-02-24)
+
+
+### Bug Fixes
+
+* **jobs:** adds jobs for running screeners ([15a6f57](https://github.com/eeon-tech/constants-and-utils/commit/15a6f5778bd62ceccfa90b577d149d47b7ccecd2))
+
 ## [1.24.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.0...v1.24.1) (2020-02-15)
 
 
