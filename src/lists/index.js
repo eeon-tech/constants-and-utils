@@ -911,7 +911,7 @@ export const screenableMetrics = {
   // totalDebt
 }
 
-const screenableMetricsList = _.flatten(_.values(screenableMetrics))
+export const screenableMetricsList = _.flatten(_.values(screenableMetrics))
 
 export const getScreenableMetricById = (id) =>
   screenableMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
