@@ -1,3 +1,10 @@
+## [1.24.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.2...v1.24.3) (2020-03-04)
+
+
+### Bug Fixes
+
+* **lists:** exports list of screenable metrics ([eb62e0e](https://github.com/eeon-tech/constants-and-utils/commit/eb62e0e04c038e33e95d229c87800e87f2d46b20))
+
 ## [1.24.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.1...v1.24.2) (2020-02-24)
 
 
