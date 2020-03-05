@@ -27,7 +27,7 @@ exports.queueNames = utils.keymirror({
   runPreMarketJobs: null,
   runDailyEEONScreenerlists: null,
   runDailyUserScreenerlists: null,
-  runHourlyEEONScreenerlist: null,
+  runHourlyEEONScreenerlists: null,
   runHourlyUserScreenerlists: null,
   sendRealtimeSecurities: null,
   sendUserSecurityAlertMessages: null,
