@@ -1,3 +1,10 @@
+## [1.24.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.3...v1.24.4) (2020-03-05)
+
+
+### Bug Fixes
+
+* **jobs:** fixes missing plural on job name ([edd9845](https://github.com/eeon-tech/constants-and-utils/commit/edd9845fd7ff6999af0b47e1ecda8404a90ad0b4))
+
 ## [1.24.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.2...v1.24.3) (2020-03-04)
 
 
