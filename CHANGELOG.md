@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.4...v1.25.0) (2020-03-07)
+
+
+### Features
+
+* **jobs:** adds new job queue name ([2448067](https://github.com/eeon-tech/constants-and-utils/commit/24480679f72e60523c4c867cabbd29da3992cf4f))
+
 ## [1.24.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.3...v1.24.4) (2020-03-05)
 
 
