@@ -19,7 +19,7 @@ export const macros = {
     { symbol: 'SPY', label: 'S&P 500', type: macroTypes.INDEX },
     { symbol: 'DIA', label: 'Dow Jones', type: macroTypes.INDEX },
     { symbol: 'IWM', label: 'Russell 2K', type: macroTypes.INDEX },
-    { symbol: 'VIX', label: 'Volatility', type: macroTypes.INDEX },
+    { symbol: 'VXX', label: 'Volatility', type: macroTypes.INDEX },
     { symbol: 'QQQ', label: 'NASDAQ 100 ', type: macroTypes.INDEX },
     { symbol: 'VTI', label: 'Total Stock Market', type: macroTypes.INDEX },
   ],
