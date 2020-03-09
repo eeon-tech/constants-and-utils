@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.0...v1.26.1) (2020-03-09)
+
+
+### Bug Fixes
+
+* **macros:** replaces iwf with vix ([7abdfaa](https://github.com/eeon-tech/constants-and-utils/commit/7abdfaa8950dfd7d65359cf247c60d0f90f3b27d))
+
 # [1.26.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.25.0...v1.26.0) (2020-03-09)
 
 
