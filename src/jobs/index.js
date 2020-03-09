@@ -32,5 +32,6 @@ exports.queueNames = utils.keymirror({
   runHourlyUserScreenerlists: null,
   sendRealtimeSecurities: null,
   sendUserSecurityAlertMessages: null,
+  storeRealtimeData: null,
   triggerUserSecurityAlerts: null,
 })
