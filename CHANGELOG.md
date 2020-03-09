@@ -1,3 +1,10 @@
+## [1.26.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.2...v1.26.3) (2020-03-09)
+
+
+### Bug Fixes
+
+* **macros:** switch vxx for iwf ([5be06f0](https://github.com/eeon-tech/constants-and-utils/commit/5be06f01fe201af7506459b765e535e876d2922a))
+
 ## [1.26.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.1...v1.26.2) (2020-03-09)
 
 
