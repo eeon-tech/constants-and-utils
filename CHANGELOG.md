@@ -1,3 +1,10 @@
+## [1.26.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.1...v1.26.2) (2020-03-09)
+
+
+### Bug Fixes
+
+* **macros:** fixes macros vix symbol ([4fa4634](https://github.com/eeon-tech/constants-and-utils/commit/4fa46343bccd9b8da63036190f218f8a04a83baa))
+
 ## [1.26.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.0...v1.26.1) (2020-03-09)
 
 
