@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.25.0...v1.26.0) (2020-03-09)
+
+
+### Features
+
+* **jobs:** adds queue name for processing realtime jobs ([624678c](https://github.com/eeon-tech/constants-and-utils/commit/624678c207599a99fb2306bdc37c3c6787b42881))
+
 # [1.25.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.24.4...v1.25.0) (2020-03-07)
 
 
