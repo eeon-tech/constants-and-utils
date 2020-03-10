@@ -1,3 +1,10 @@
+## [1.26.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.3...v1.26.4) (2020-03-10)
+
+
+### Bug Fixes
+
+* **value-buckets:** adds negative percentage value buckets ([5800e65](https://github.com/eeon-tech/constants-and-utils/commit/5800e65000ad29b8c6670d4edd9200458bdd28fe))
+
 ## [1.26.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.2...v1.26.3) (2020-03-09)
 
 
