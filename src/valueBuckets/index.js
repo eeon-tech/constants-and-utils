@@ -150,6 +150,20 @@ export const peRatioValueBuckets = [
 ]
 
 export const percentageValueBuckets = [
+  createPercentageValueBucket(-0.3),
+  createPercentageValueBucket(-0.25),
+  createPercentageValueBucket(-0.2),
+  createPercentageValueBucket(-0.15),
+  createPercentageValueBucket(-0.1),
+  createPercentageValueBucket(-0.09),
+  createPercentageValueBucket(-0.08),
+  createPercentageValueBucket(-0.07),
+  createPercentageValueBucket(-0.06),
+  createPercentageValueBucket(-0.05),
+  createPercentageValueBucket(-0.04),
+  createPercentageValueBucket(-0.03),
+  createPercentageValueBucket(-0.02),
+  createPercentageValueBucket(-0.01),
   createPercentageValueBucket(0),
   createPercentageValueBucket(0.01),
   createPercentageValueBucket(0.02),
