@@ -216,13 +216,13 @@ export const priceToBookValueBuckets = [
 
 export const profitMarginValueBuckets = [
   createPercentageValueBucket(0),
-  createPercentageValueBucket(10),
-  createPercentageValueBucket(15),
-  createPercentageValueBucket(20),
-  createPercentageValueBucket(25),
-  createPercentageValueBucket(30),
-  createPercentageValueBucket(50),
-  createPercentageValueBucket(75, '🔥'),
+  createPercentageValueBucket(0.1),
+  createPercentageValueBucket(0.15),
+  createPercentageValueBucket(0.2),
+  createPercentageValueBucket(0.25),
+  createPercentageValueBucket(0.3),
+  createPercentageValueBucket(0.5),
+  createPercentageValueBucket(0.75, '🔥'),
 ]
 
 const revenueValueBucketOverrides = { currency: true }
