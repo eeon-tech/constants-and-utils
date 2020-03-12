@@ -1,3 +1,10 @@
+## [1.26.5](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.4...v1.26.5) (2020-03-12)
+
+
+### Bug Fixes
+
+* **value-buckets:** fixes profit margin value bucket values ([43dc367](https://github.com/eeon-tech/constants-and-utils/commit/43dc367a0b150be776400c2237386ea7f7ee2359))
+
 ## [1.26.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.3...v1.26.4) (2020-03-10)
 
 
