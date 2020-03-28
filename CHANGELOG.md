@@ -1,3 +1,10 @@
+## [1.27.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.0...v1.27.1) (2020-03-28)
+
+
+### Bug Fixes
+
+* **env:** fixes stripe plan id getter ([faea72d](https://github.com/eeon-tech/constants-and-utils/commit/faea72dc1f89cecfe38585c3c08a4ffd189cfbfd))
+
 # [1.27.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.5...v1.27.0) (2020-03-28)
 
 
