@@ -17,7 +17,7 @@ exports.stripeCouponDurations = utils.keymirrorLower({
 
 exports.stripePlans = utils.keymirrorUpper({
   BASIC: null,
-  PROFESSIONAL: null,
+  INVESTOR: null,
 })
 
 exports.stripeSubscriptionStatuses = utils.keymirrorLower({

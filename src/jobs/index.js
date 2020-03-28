@@ -11,7 +11,7 @@ exports.cleanPeriods = {
 /**
  * In what timezone should the cron-scheduler take effect?
  */
-exports.timezone = 'America/New_York'
+exports.timezone = 'Etc/UTC	'
 
 /**
  * Names of the jobs

@@ -29,7 +29,7 @@ import {
  * Subscription plans
  * ====================
  */
-const { BASIC, PROFESSIONAL } = subscriptionPlans.stripePlans
+const { BASIC, INVESTOR } = subscriptionPlans.stripePlans
 
 /**
  * ====================
@@ -93,7 +93,7 @@ export const avg10Volume = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'avg10Volume',
   label: '10 Day Average Volume',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '10D Avg. Volume',
   transform: volumeTransform,
 }
@@ -106,7 +106,7 @@ export const avg30Volume = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'avg30Volume',
   label: '30 Day Average Volume',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '30D Avg. Volume',
   transform: volumeTransform,
 }
@@ -119,7 +119,7 @@ export const beta = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'beta',
   label: 'Beta',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Beta',
   transform: betaTransform,
 }
@@ -132,7 +132,7 @@ export const change = {
   databaseModelName: metricRelations.QUOTE,
   id: 'change',
   label: 'Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Change',
   transform: currencyTransform,
 }
@@ -145,7 +145,7 @@ export const changePercent = {
   databaseModelName: metricRelations.QUOTE,
   id: 'changePercent',
   label: 'Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '% Change',
   transform: percentageTransform,
 }
@@ -155,7 +155,7 @@ export const currentDebt = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'currentDebt',
   label: 'Current Debt',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Current Debt',
   transform: averageCurrencyTransform,
 }
@@ -168,7 +168,7 @@ export const day14RSI = {
   databaseModelName: metricRelations.TECHNICAL_INDICATORS,
   id: 'day14RSI',
   label: '14 Day RSI',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'RSI',
   transform: averageTransform,
 }
@@ -181,7 +181,7 @@ export const day30ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day30ChangePercent',
   label: '30 Day Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '30D % Change',
   transform: percentageTransform,
 }
@@ -194,7 +194,7 @@ export const day5ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day5ChangePercent',
   label: '5 Day Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '5D % Change',
   transform: percentageTransform,
 }
@@ -207,7 +207,7 @@ export const day50MovingAvg = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day50MovingAvg',
   label: '50 Day Moving Average',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '50D Moving Avg.',
   transform: currencyTransform,
 }
@@ -220,7 +220,7 @@ export const day200MovingAvg = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day200MovingAvg',
   label: '200 Day Moving Average',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '200D Moving Avg.',
   transform: currencyTransform,
 }
@@ -230,7 +230,7 @@ export const debtToEquity = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'debtToEquity',
   label: 'Debt to Equity',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Debt/Equity',
   transform: ratioTransform,
 }
@@ -243,7 +243,7 @@ export const dividendYield = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'dividendYield',
   label: 'Dividend Yield',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Div. Yield',
   transform: percentageTransform,
 }
@@ -256,7 +256,7 @@ export const earningsYield = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'earningsYield',
   label: 'Earnings Yield',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Earnings Yield',
   transform: percentageTransform,
 }
@@ -269,7 +269,7 @@ export const EBITDA = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'EBITDA',
   label: 'EBITDA',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'EBITDA',
   transform: averageCurrencyTransform,
 }
@@ -282,7 +282,7 @@ export const EEONGrowthScore = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'growthScore',
   label: 'EEON Growth Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Growth Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -296,7 +296,7 @@ export const EEONMomentumScore = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'momentumScore',
   label: 'EEON Momentum Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Momentum Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -310,7 +310,7 @@ export const EEONProfitabilityScore = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'profitabilityScore',
   label: 'EEON Profitability Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Profitability Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -324,7 +324,7 @@ export const EEONRuleOf40Score = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'ruleOf40Score',
   label: 'EEON Rule of 40 Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Rule of 40 Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -338,7 +338,7 @@ export const EEONSafetyScore = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'safetyScore',
   label: 'EEON Safety Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Safety Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -352,7 +352,7 @@ export const EEONValueScore = {
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'valueScore',
   label: 'EEON Value Score',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Value Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
@@ -366,7 +366,7 @@ export const employees = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'employees',
   label: 'Employees',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Employees',
   transform: averageTransform,
 }
@@ -379,7 +379,7 @@ export const enterpriseValue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'enterpriseValue',
   label: 'Enterprise Value',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Enterprise Value',
   transform: averageCurrencyTransform,
 }
@@ -392,7 +392,7 @@ export const enterpriseValueToRevenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'enterpriseValueToRevenue',
   label: 'Enterprise Value to Revenue',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Ent. Value to Rev.',
   transform: ratioTransform,
 }
@@ -405,7 +405,7 @@ export const extendedChangePercent = {
   databaseModelName: metricRelations.QUOTE,
   id: 'extendedChangePercet',
   label: 'After Hours Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'After Hours % Percent',
   transform: percentageTransform,
 }
@@ -418,7 +418,7 @@ export const forwardPERatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'forwardPERatio',
   label: 'Forward PE Ratio',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'For. PE Ratio',
   transform: ratioTransform,
 }
@@ -431,7 +431,7 @@ export const grossProfit = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'grossProfit',
   label: 'Gross Profit',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Gross Profit',
   transform: averageCurrencyTransform,
 }
@@ -444,7 +444,7 @@ export const latestPrice = {
   databaseModelName: metricRelations.QUOTE,
   id: 'latestPrice',
   label: 'Price',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Price',
   transform: currencyTransform,
 }
@@ -457,7 +457,7 @@ export const marketCap = {
   databaseModelName: metricRelations.QUOTE,
   id: 'marketCap',
   label: 'Market Cap.',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Market Cap.',
   transform: averageCurrencyTransform,
 }
@@ -470,7 +470,7 @@ export const month1ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month1ChangePercent',
   label: '1M Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '1M % Change',
   transform: percentageTransform,
 }
@@ -483,7 +483,7 @@ export const month3ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month3ChangePercent',
   label: '3M Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '3M % Change',
   transform: percentageTransform,
 }
@@ -496,7 +496,7 @@ export const month6ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month6ChangePercent',
   label: '6M Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '6M % Change',
   transform: percentageTransform,
 }
@@ -509,7 +509,7 @@ export const open = {
   databaseModelName: metricRelations.QUOTE,
   id: 'open',
   label: 'Open',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Open',
   transform: currencyTransform,
 }
@@ -522,7 +522,7 @@ export const peRatio = {
   databaseModelName: metricRelations.QUOTE,
   id: 'peRatio',
   label: 'PE Ratio',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'PE Ratio',
   transform: ratioTransform,
 }
@@ -535,7 +535,7 @@ export const pegRatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'pegRatio',
   label: 'PEG Ratio',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'PEG Ratio',
   transform: ratioTransform,
 }
@@ -548,7 +548,7 @@ export const previousClose = {
   databaseModelName: metricRelations.QUOTE,
   id: 'previousClose',
   label: 'Previous Close',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Prev. Close',
   transform: currencyTransform,
 }
@@ -561,7 +561,7 @@ export const priceToBook = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToBook',
   label: 'Price to Book',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'P/B',
   transform: ratioTransform,
 }
@@ -574,7 +574,7 @@ export const priceToSales = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToSales',
   label: 'Price to Sales',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'P/S',
   transform: ratioTransform,
 }
@@ -587,7 +587,7 @@ export const profitMargin = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'profitMargin',
   label: 'Profit Margin',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Profit Margin',
   transform: percentageTransform,
 }
@@ -600,7 +600,7 @@ export const revenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenue',
   label: 'Revenue',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Revenue',
   transform: averageCurrencyTransform,
 }
@@ -613,7 +613,7 @@ export const revenuePerEmployee = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerEmployee',
   label: 'Revenue per Employee',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Revenue/Employee',
   transform: averageCurrencyTransform,
 }
@@ -626,7 +626,7 @@ export const revenuePerShare = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerShare',
   label: 'Revenue per Share',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Revenue/Share',
   transform: currencyTransform,
 }
@@ -639,7 +639,7 @@ export const sharesOutstanding = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'sharesOutstanding',
   label: 'Shares Outstanding',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Shares',
   transform: averageTransform,
 }
@@ -652,7 +652,7 @@ export const ttmEPS = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ttmTPS',
   label: 'EPS (TTM)',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'EPS (TTM)',
   transform: currencyTransform,
 }
@@ -665,7 +665,7 @@ export const totalCash = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'totalCash',
   label: 'Total Cash',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Cash',
   transform: averageCurrencyTransform,
 }
@@ -678,7 +678,7 @@ export const totalRevenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'totalRevenue',
   label: 'Total Revenue',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Total Revenue',
   transform: averageCurrencyTransform,
 }
@@ -691,7 +691,7 @@ export const ttmReturnOnAssets = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'ttmReturnOnAssets',
   label: 'Return on Assets (TTM)',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'ROA (TTM)',
   transform: percentageTransform,
 }
@@ -704,7 +704,7 @@ export const ttmReturnOnEquity = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'ttmReturnOnEquity',
   label: 'Return on Equity (TTM)',
-  requiresPlan: [PROFESSIONAL],
+  requiresPlan: [INVESTOR],
   shortLabel: 'ROE (TTM)',
   transform: percentageTransform,
 }
@@ -717,7 +717,7 @@ export const volume = {
   databaseModelName: metricRelations.QUOTE,
   id: 'volume',
   label: 'Volume',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Volume',
   transform: volumeTransform,
 }
@@ -730,7 +730,7 @@ export const week52change = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'week52cigh',
   label: '52 Week Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '52W Change',
   transform: currencyTransform,
 }
@@ -743,7 +743,7 @@ export const week52High = {
   databaseModelName: metricRelations.QUOTE,
   id: 'week52High',
   label: '52 Week High',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '52W High',
   transform: currencyTransform,
 }
@@ -753,10 +753,10 @@ export const week52High = {
  */
 export const week52Low = {
   valueBuckets: priceValueBuckets,
-  databaseModelName: metricRelations.KEY_STATS,
+  databaseModelName: metricRelations.QUOTE,
   id: 'week52Low',
   label: '52 Week Low',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '52W Low',
   transform: currencyTransform,
 }
@@ -769,7 +769,7 @@ export const year1ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year1ChangePercent',
   label: '1Y Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '1Y % Change',
   transform: percentageTransform,
 }
@@ -782,7 +782,7 @@ export const year2ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year2ChangePercent',
   label: '2Y Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '2Y % Change',
   transform: percentageTransform,
 }
@@ -795,7 +795,7 @@ export const year5ChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year5ChangePercent',
   label: '5Y Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: '5Y % Change',
   transform: percentageTransform,
 }
@@ -808,7 +808,7 @@ export const ytdChangePercent = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ytdChangePercent',
   label: 'YTD Percent Change',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'YTD % Change',
   transform: percentageTransform,
 }
@@ -821,7 +821,7 @@ export const YoYEPSGrowth = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'YoYEPSGrowth',
   label: 'YoY EPS Growth',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'YoY EPS Grow',
   transform: percentageTransform,
 }
@@ -834,7 +834,7 @@ export const YoYRevenueGrowth = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'YoYRevenueGrowth',
   label: 'YoY Revenue Growth',
-  requiresPlan: [BASIC, PROFESSIONAL],
+  requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'YoY Rev. Grow',
   transform: percentageTransform,
 }
