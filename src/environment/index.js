@@ -78,7 +78,7 @@ exports.getStripeBasicPlanId = (env = process.env) =>
   _.get(env, ['STRIPE_BASIC_PLAN_ID'])
 
 exports.getStripeInvestorPlanId = (env = process.env) =>
-  _.gt(env, ['STRIPE_INVESTOR_PLAN_ID'])
+  _.get(env, ['STRIPE_INVESTOR_PLAN_ID'])
 
 exports.getStripeProfessionalPlanId = (env = process.env) =>
   _.get(env, ['STRIPE_PROFESSIONAL_PLAN_ID'])
