@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.5...v1.27.0) (2020-03-28)
+
+
+### Features
+
+* **plans:** swaps professional plan for investor plan ([1bbac49](https://github.com/eeon-tech/constants-and-utils/commit/1bbac493817677665296c4de1a351550c1910507))
+
 ## [1.26.5](https://github.com/eeon-tech/constants-and-utils/compare/v1.26.4...v1.26.5) (2020-03-12)
 
 
