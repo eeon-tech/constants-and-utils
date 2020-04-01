@@ -892,7 +892,7 @@ export const screenableMetrics = {
   value: [
     dividendYield,
     forwardPERatio,
-    pegRatio,
+    // pegRatio,
     priceToSales,
     priceToBook,
     earningsYield,
