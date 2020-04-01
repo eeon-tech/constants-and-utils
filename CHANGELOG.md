@@ -1,3 +1,10 @@
+## [1.27.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.1...v1.27.2) (2020-04-01)
+
+
+### Bug Fixes
+
+* **screenable-metrics:** removes peg ratio ([4ed424c](https://github.com/eeon-tech/constants-and-utils/commit/4ed424cc6d0642a446713726f7a173981c26998e))
+
 ## [1.27.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.0...v1.27.1) (2020-03-28)
 
 
