@@ -1,3 +1,10 @@
+## [1.27.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.2...v1.27.3) (2020-04-21)
+
+
+### Bug Fixes
+
+* **beta:** fixes beta value buckets ([47154f8](https://github.com/eeon-tech/constants-and-utils/commit/47154f8b233d5e3bc01b6c99b39c706ee6d162f0))
+
 ## [1.27.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.1...v1.27.2) (2020-04-01)
 
 
