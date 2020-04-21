@@ -33,12 +33,22 @@ export const createNumericValueBucket = (
   value,
 })
 
+export const createIdentityValueBucket = (
+  value,
+  label,
+  priceValueBucketsOverrides = {}
+) => ({
+  formattedValue: value,
+  label: label,
+  value,
+})
+
 export const betaValueBuckets = [
-  createNumericValueBucket(0),
-  createNumericValueBucket(0.5, 'Less volatile than market'),
-  createNumericValueBucket(1, 'Moves with Market'),
-  createNumericValueBucket(1.5, 'More volatile than market'),
-  createNumericValueBucket(2),
+  createIdentityValueBucket(0),
+  createIdentityValueBucket(0.5, 'Less volatile than market'),
+  createIdentityValueBucket(1, 'Moves with Market'),
+  createIdentityValueBucket(1.5, 'More volatile than market'),
+  createIdentityValueBucket(2),
 ]
 
 export const dividendYieldValueBuckets = [
