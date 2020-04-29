@@ -6,6 +6,10 @@ const prefixSystemList = (key) => `systemLists:${key}`
 
 exports.cachePeriodsInMS = {
   '1m': convertToMS(60),
+  '2m': convertToMS(120),
+  '3m': convertToMS(180),
+  '4m': convertToMS(240),
+  '5m': convertToMS(300),
   '15m': convertToMS(900),
   '1h': convertToMS(3600),
   '4h': convertToMS(14400),
