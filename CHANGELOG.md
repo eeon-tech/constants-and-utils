@@ -1,3 +1,10 @@
+## [1.27.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.3...v1.27.4) (2020-04-29)
+
+
+### Bug Fixes
+
+* **macros:** adds short labels ([7425261](https://github.com/eeon-tech/constants-and-utils/commit/742526195ba5f3f3dedc528f893d151739b9828c))
+
 ## [1.27.3](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.2...v1.27.3) (2020-04-21)
 
 
