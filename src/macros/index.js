@@ -29,13 +29,13 @@ export const macros = {
     {
       symbol: 'VTV',
       label: 'Value',
-      shortLabel: 'Vaue',
+      shortLabel: 'Value',
       type: macroTypes.FACTOR,
     },
     {
       symbol: 'VUG',
       label: 'Large Cap Growth',
-      shortLabel: 'Large Cap. Gro.',
+      shortLabel: 'Large Cap. Growth',
       type: macroTypes.FACTOR,
     },
     {
