@@ -1,3 +1,10 @@
+## [1.27.5](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.4...v1.27.5) (2020-04-30)
+
+
+### Bug Fixes
+
+* **macros:** fixes typos in macros ([e96ed7f](https://github.com/eeon-tech/constants-and-utils/commit/e96ed7f04b8e33e8fe74574636cdae8b4540b90b))
+
 ## [1.27.4](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.3...v1.27.4) (2020-04-29)
 
 
