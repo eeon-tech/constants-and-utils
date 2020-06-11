@@ -155,7 +155,7 @@ export const currentDebt = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'currentDebt',
   label: 'Current Debt',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Current Debt',
   transform: averageCurrencyTransform,
 }
@@ -168,7 +168,7 @@ export const day14RSI = {
   databaseModelName: metricRelations.TECHNICAL_INDICATORS,
   id: 'day14RSI',
   label: '14 Day RSI',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'RSI',
   transform: averageTransform,
 }
@@ -230,7 +230,7 @@ export const debtToEquity = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'debtToEquity',
   label: 'Debt to Equity',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Debt/Equity',
   transform: ratioTransform,
 }
@@ -256,7 +256,7 @@ export const earningsYield = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'earningsYield',
   label: 'Earnings Yield',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Earnings Yield',
   transform: percentageTransform,
 }
@@ -269,7 +269,7 @@ export const EBITDA = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'EBITDA',
   label: 'EBITDA',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'EBITDA',
   transform: averageCurrencyTransform,
 }
@@ -323,9 +323,9 @@ export const EEONRuleOf40Score = {
   valueBuckets: EEONPerformanceScoresValueBuckets,
   databaseModelName: metricRelations.EEON_PERFORMANCE_SCORES,
   id: 'ruleOf40Score',
-  label: 'EEON Rule of 40 Score',
+  label: 'EEON Scalability Score',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Rule of 40 Score',
+  shortLabel: 'Scalability Score',
   transform: percentageValueTransform,
   unformatter: EEONPerformanceScoreUnformatter,
 }
@@ -379,7 +379,7 @@ export const enterpriseValue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'enterpriseValue',
   label: 'Enterprise Value',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Enterprise Value',
   transform: averageCurrencyTransform,
 }
@@ -392,7 +392,7 @@ export const enterpriseValueToRevenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'enterpriseValueToRevenue',
   label: 'Enterprise Value to Revenue',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Ent. Value to Rev.',
   transform: ratioTransform,
 }
@@ -418,7 +418,7 @@ export const forwardPERatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'forwardPERatio',
   label: 'Forward PE Ratio',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'For. PE Ratio',
   transform: ratioTransform,
 }
@@ -431,7 +431,7 @@ export const grossProfit = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'grossProfit',
   label: 'Gross Profit',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Gross Profit',
   transform: averageCurrencyTransform,
 }
@@ -535,7 +535,7 @@ export const pegRatio = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'pegRatio',
   label: 'PEG Ratio',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'PEG Ratio',
   transform: ratioTransform,
 }
@@ -613,7 +613,7 @@ export const revenuePerEmployee = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerEmployee',
   label: 'Revenue per Employee',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Revenue/Employee',
   transform: averageCurrencyTransform,
 }
@@ -626,7 +626,7 @@ export const revenuePerShare = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'revenuePerShare',
   label: 'Revenue per Share',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Revenue/Share',
   transform: currencyTransform,
 }
@@ -652,7 +652,7 @@ export const ttmEPS = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ttmTPS',
   label: 'EPS (TTM)',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'EPS (TTM)',
   transform: currencyTransform,
 }
@@ -665,7 +665,7 @@ export const totalCash = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'totalCash',
   label: 'Total Cash',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Cash',
   transform: averageCurrencyTransform,
 }
@@ -678,7 +678,7 @@ export const totalRevenue = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'totalRevenue',
   label: 'Total Revenue',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Total Revenue',
   transform: averageCurrencyTransform,
 }
@@ -821,7 +821,7 @@ export const YoYEPSGrowth = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'YoYEPSGrowth',
   label: 'YoY EPS Growth',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'YoY EPS Grow',
   transform: percentageTransform,
 }
@@ -834,7 +834,7 @@ export const YoYRevenueGrowth = {
   databaseModelName: metricRelations.DERIVED_SECURITY_METRICS,
   id: 'YoYRevenueGrowth',
   label: 'YoY Revenue Growth',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'YoY Rev. Grow',
   transform: percentageTransform,
 }
