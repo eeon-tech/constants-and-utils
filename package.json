@@ -1,6 +1,6 @@
 {
   "name": "@eeon/constants-and-utils",
-  "version": "1.27.5",
+  "version": "1.27.6",
   "description": "Shared Eeon Constants and Utilities",
   "main": "dist/index.js",
   "repository": {

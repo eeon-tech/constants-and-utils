@@ -1,3 +1,10 @@
+## [1.27.6](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.5...v1.27.6) (2020-06-11)
+
+
+### Bug Fixes
+
+* **metrics:** changes some metrics to be investor ([f957cc9](https://github.com/eeon-tech/constants-and-utils/commit/f957cc9d98b0e5765bf33c07d85ecf6c82aedbe8))
+
 ## [1.27.5](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.4...v1.27.5) (2020-04-30)
 
 
