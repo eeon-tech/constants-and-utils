@@ -243,7 +243,7 @@ export const dividendYield = {
   databaseModelName: metricRelations.KEY_STATS,
   id: 'dividendYield',
   label: 'Dividend Yield',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Div. Yield',
   transform: percentageTransform,
 }
@@ -561,7 +561,7 @@ export const priceToBook = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToBook',
   label: 'Price to Book',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'P/B',
   transform: ratioTransform,
 }
@@ -574,7 +574,7 @@ export const priceToSales = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'priceToSales',
   label: 'Price to Sales',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'P/S',
   transform: ratioTransform,
 }
@@ -587,7 +587,7 @@ export const profitMargin = {
   databaseModelName: metricRelations.ADVANCED_STATS,
   id: 'profitMargin',
   label: 'Profit Margin',
-  requiresPlan: [BASIC, INVESTOR],
+  requiresPlan: [INVESTOR],
   shortLabel: 'Profit Margin',
   transform: percentageTransform,
 }
@@ -863,10 +863,10 @@ export const screenableMetrics = {
     latestPrice,
     marketCap,
     peRatio,
+    revenue,
     day14RSI,
     YoYRevenueGrowth,
     YoYEPSGrowth,
-    revenue,
   ],
   EEONPerformanceScores: [
     EEONGrowthScore,
