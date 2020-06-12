@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.6...v1.28.0) (2020-06-12)
+
+
+### Features
+
+* **lists:** makes more metrics investor only ([152951b](https://github.com/eeon-tech/constants-and-utils/commit/152951bc70785fd7261cbe4527488467ef3c2c22))
+
 ## [1.27.6](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.5...v1.27.6) (2020-06-11)
 
 
