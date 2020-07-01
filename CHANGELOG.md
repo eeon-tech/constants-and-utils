@@ -1,3 +1,10 @@
+## [1.28.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.0...v1.28.1) (2020-07-01)
+
+
+### Bug Fixes
+
+* **week52change:** converts to percentage ([0afb286](https://github.com/eeon-tech/constants-and-utils/commit/0afb28685e656a01997bf8333373581044d2906d))
+
 # [1.28.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.27.6...v1.28.0) (2020-06-12)
 
 
