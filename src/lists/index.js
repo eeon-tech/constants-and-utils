@@ -728,11 +728,11 @@ export const volume = {
 export const week52change = {
   valueBuckets: priceValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
-  id: 'week52cigh',
-  label: '52 Week Change',
+  id: 'week52change',
+  label: '52 Week % Change',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '52W Change',
-  transform: currencyTransform,
+  shortLabel: '52W % Change',
+  transform: percentageTransform,
 }
 
 /**
