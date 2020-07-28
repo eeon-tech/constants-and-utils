@@ -1,3 +1,11 @@
+## [1.28.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.1...v1.28.2) (2020-07-28)
+
+
+### Bug Fixes
+
+* **build:** full es6 and better bundling ([e46337f](https://github.com/eeon-tech/constants-and-utils/commit/e46337fd599e7b7f311f0d2c4a6e6b45265b2006))
+* **bundling:** uses microbundle successfully ([fbda304](https://github.com/eeon-tech/constants-and-utils/commit/fbda304a5dc81817c39a2d10fd3a2bbc09398dc3))
+
 ## [1.28.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.0...v1.28.1) (2020-07-01)
 
 
