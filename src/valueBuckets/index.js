@@ -3,7 +3,7 @@
  * These are solely values, predicates are separate and can be applied to a bucket
  */
 import _ from 'lodash'
-import formatNumbers from '../formatNumbers'
+import * as formatNumbers from '../formatNumbers'
 
 export const createPercentageValueBucket = (value, label) => ({
   formattedValue: formatNumbers.formatNumberNicely(value, {

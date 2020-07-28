@@ -1,5 +1,13 @@
 import _ from 'lodash'
+import has from 'lodash/has'
+import divide from 'lodash/divide'
+import isEqual from 'lodash/isEqual'
+import flatten from 'lodash/flatten'
+import values from 'lodash/values'
+import multiply from 'lodash/multiply'
 import _fp from 'lodash/fp'
+import pipe from 'lodash/fp/pipe'
+import toNumber from 'lodash/fp/toNumber'
 import subscriptionPlans from '../subscriptionPlans'
 import { formatNumberNicely } from '../formatNumbers'
 import {
@@ -70,7 +78,7 @@ export const percentageTransform = (value = 0) =>
   formatNumberNicely(value, { mantissa: 2, percentage: true })
 
 export const percentageValueTransform = (value = 0) => {
-  const toValue = _.multiply(value, 100)
+  const toValue = multiply(value, 100)
   return formatNumberNicely(toValue, { mantissa: 0 })
 }
 
@@ -80,9 +88,8 @@ export const ratioTransform = (value = 0) =>
 export const volumeTransform = (value = 0) =>
   formatNumberNicely(value, { average: true, totalLength: 4 })
 
-export const EEONPerformanceScoreUnformatter = _fp.pipe(
-  _fp.toNumber,
-  (number) => _.divide(number, 100)
+export const EEONPerformanceScoreUnformatter = pipe(_toNumber, (number) =>
+  divide(number, 100)
 )
 
 /**
@@ -855,7 +862,7 @@ export const alertMetrics = [
 ]
 
 export const getAlertMetricById = (id) =>
-  alertMetrics.find((item) => _.isEqual(item.id, id)) || changePercent
+  alertMetrics.find((item) => isEqual(item.id, id)) || changePercent
 
 export const screenableMetrics = {
   popular: [
@@ -911,10 +918,10 @@ export const screenableMetrics = {
   // totalDebt
 }
 
-export const screenableMetricsList = _.flatten(_.values(screenableMetrics))
+export const screenableMetricsList = flatten(values(screenableMetrics))
 
 export const getScreenableMetricById = (id) =>
-  screenableMetricsList.find((item) => _.isEqual(item.id, id)) || changePercent
+  screenableMetricsList.find((item) => isEqual(item.id, id)) || changePercent
 
 /**
  * List types
@@ -929,19 +936,19 @@ export const listTypes = {
 /**
  * Checks if a list is an EEON list
  */
-export const isEEONList = (list = {}) => !_.has(list, ['userId'])
+export const isEEONList = (list = {}) => !has(list, ['userId'])
 
 /**
  * Checks if a list is a User list
  */
-export const isUserList = (list = {}) => _.has(list, ['userId'])
+export const isUserList = (list = {}) => has(list, ['userId'])
 
 /**
  * Checks if a list has criteria (and is a Screener)
  */
-export const isListScreener = (list = {}) => _.has(list, 'criteria')
+export const isListScreener = (list = {}) => has(list, 'criteria')
 
 /**
  * Checks if a list has a holdings count (and is a Watchlist)
  */
-export const isListWatchlist = (list = {}) => _.has(list, 'holdingsCount')
+export const isListWatchlist = (list = {}) => has(list, 'holdingsCount')

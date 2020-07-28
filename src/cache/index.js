@@ -1,10 +1,6 @@
-const _fp = require('lodash/fp')
+const convertToMS = (value) => value * 1000
 
-const convertToMS = _fp.multiply(1000)
-
-const prefixSystemList = (key) => `systemLists:${key}`
-
-exports.cachePeriodsInMS = {
+export const cachePeriodsInMS = {
   '1m': convertToMS(60),
   '2m': convertToMS(120),
   '3m': convertToMS(180),
@@ -22,15 +18,4 @@ exports.cachePeriodsInMS = {
   '14D': convertToMS(1209600),
   '1M': convertToMS(2592000),
   '6M': convertToMS(15552000),
-}
-
-exports.notableKeys = {
-  COMPANY_NEWS: 'companyNews',
-  EARNINGS_TODAY: prefixSystemList('earningsToday'),
-  IPOS_TODAY: prefixSystemList('IPOsToday'),
-  LATEST_NEWS: prefixSystemList('latestNews'),
-  LOSERS: prefixSystemList('losers'),
-  MOST_ACTIVE: prefixSystemList('mostActive'),
-  SECTOR_PERFORMANCE: prefixSystemList('sectorPerformance'),
-  WINNERS: prefixSystemList('winners'),
 }

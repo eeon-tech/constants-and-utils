@@ -1,90 +1,94 @@
-const _ = require('lodash')
-const _fp = require('lodash/fp')
+import get from 'lodash/get'
+import isEqual from 'lodash/fp/isEqual'
 
-const isEnabled = _fp.isEqual('enabled')
+const isEnabled = isEqual('enabled')
+const isSandbox = isEqual('sandbox')
 
 const isIEXSandbox = (env = process.env) =>
-  _.isEqual('sandbox', _.get(env, 'IEX_ENVIRONMENT'), true)
+  isSandbox('sandbox', get(env, 'IEX_ENVIRONMENT'), true)
 
-exports.getArenaPassword = (env = process.env) => _.get(env, ['ARENA_PASSWORD'])
+export const getArenaPassword = (env = process.env) =>
+  get(env, ['ARENA_PASSWORD'])
 
-exports.getArenaUsername = (env = process.env) => _.get(env, ['ARENA_PASSWORD'])
+export const getArenaUsername = (env = process.env) =>
+  get(env, ['ARENA_PASSWORD'])
 
-exports.getCloudinaryAPIKey = (env = process.env) =>
-  _.get(env, ['CLOUDINARY_API_KEY'])
+export const getCloudinaryAPIKey = (env = process.env) =>
+  get(env, ['CLOUDINARY_API_KEY'])
 
-exports.getCloudinaryAPISecret = (env = process.env) =>
-  _.get(env, ['CLOUDINARY_API_SECRET'])
+export const getCloudinaryAPISecret = (env = process.env) =>
+  get(env, ['CLOUDINARY_API_SECRET'])
 
-exports.getCloudinaryCloudName = (env = process.env) =>
-  _.get(env, ['CLOUDINARY_CLOUD_NAME'])
+export const getCloudinaryCloudName = (env = process.env) =>
+  get(env, ['CLOUDINARY_CLOUD_NAME'])
 
-exports.getDatabaseHost = (env = process.env) =>
-  _.get(env, ['DATABASE_HOST'], 'localhost')
+export const getDatabaseHost = (env = process.env) =>
+  get(env, ['DATABASE_HOST'], 'localhost')
 
-exports.getDatabaseName = (env = process.env) =>
-  _.get(env, ['DATABASE_NAME'], 'test')
+export const getDatabaseName = (env = process.env) =>
+  get(env, ['DATABASE_NAME'], 'test')
 
-exports.getDatabasePassword = (env = process.env) =>
-  _.get(env, ['DATABASE_PASSWORD'], 'password')
+export const getDatabasePassword = (env = process.env) =>
+  get(env, ['DATABASE_PASSWORD'], 'password')
 
-exports.getDatabasePort = (env = process.env) =>
-  _.get(env, ['DATABASE_PORT'], '27017')
+export const getDatabasePort = (env = process.env) =>
+  get(env, ['DATABASE_PORT'], '27017')
 
-exports.getDatabaseUsername = (env = process.env) =>
-  _.get(env, ['DATABASE_USERNAME'], 'user')
+export const getDatabaseUsername = (env = process.env) =>
+  get(env, ['DATABASE_USERNAME'], 'user')
 
-exports.getEEONEnvironment = (env = process.env) =>
-  _.get(env, ['EEON_ENVIRONMENT'], 'development')
+export const getEEONEnvironment = (env = process.env) =>
+  get(env, ['EEON_ENVIRONMENT'], 'development')
 
-exports.getIEXPublishableToken = (env = process.env) =>
+export const getIEXPublishableToken = (env = process.env) =>
   isIEXSandbox(env)
-    ? _.get(env, ['IEX_SANDBOX_PUBLISHABLE_TOKEN'])
-    : _.get(env, 'IEX_PUBLISHABLE_TOKEN')
+    ? get(env, ['IEX_SANDBOX_PUBLISHABLE_TOKEN'])
+    : get(env, 'IEX_PUBLISHABLE_TOKEN')
 
-exports.getIEXRESTfulBaseURL = (env = process.env) =>
+export const getIEXRESTfulBaseURL = (env = process.env) =>
   isIEXSandbox(env)
     ? 'https://sandbox.iexapis.com/stable'
     : 'https://cloud.iexapis.com/stable'
 
-exports.getIEXSecretToken = (env = process.env) =>
+export const getIEXSecretToken = (env = process.env) =>
   isIEXSandbox(env)
-    ? _.get(env, ['IEX_SANDBOX_SECRET_TOKEN'])
-    : _.get(env, ['IEX_SECRET_TOKEN'])
+    ? get(env, ['IEX_SANDBOX_SECRET_TOKEN'])
+    : get(env, ['IEX_SECRET_TOKEN'])
 
-exports.getIEXStreamingBaseURL = (env = process.env) =>
+export const getIEXStreamingBaseURL = (env = process.env) =>
   isIEXSandbox(env)
     ? 'https://sandbox-sse.iexapis.com/stable'
     : 'https://cloud-sse.iexapis.com/stable'
 
-exports.getIEXAPIVersion = () => 'stable'
+export const getIEXAPIVersion = () => 'stable'
 
-exports.getIntercomAccessToken = (env = process.env) =>
-  _.get(env, ['INTERCOM_ACCESS_TOKEN'])
+export const getIntercomAccessToken = (env = process.env) =>
+  get(env, ['INTERCOM_ACCESS_TOKEN'])
 
-exports.getRedisHost = (env = process.env) => _.get(env, ['REDIS_HOST'])
+export const getRedisHost = (env = process.env) => get(env, ['REDIS_HOST'])
 
-exports.getRedisPassword = (env = process.env) => _.get(env, ['REDIS_PASSWORD'])
+export const getRedisPassword = (env = process.env) =>
+  get(env, ['REDIS_PASSWORD'])
 
-exports.getRedisPort = (env = process.env) => _.get(env, ['REDIS_PORT'])
+export const getRedisPort = (env = process.env) => get(env, ['REDIS_PORT'])
 
-exports.getSendgridAPIKey = (env = process.env) =>
-  _.get(env, ['SENDGRID_API_KEY'])
+export const getSendgridAPIKey = (env = process.env) =>
+  get(env, ['SENDGRID_API_KEY'])
 
-exports.getStockNewsAPIToken = (env = process.env) =>
-  _.get(env, ['STOCK_NEWS_API_API_KEY'])
+export const getStockNewsAPIToken = (env = process.env) =>
+  get(env, ['STOCK_NEWS_API_API_KEY'])
 
-exports.getStripeBasicPlanId = (env = process.env) =>
-  _.get(env, ['STRIPE_BASIC_PLAN_ID'])
+export const getStripeBasicPlanId = (env = process.env) =>
+  get(env, ['STRIPE_BASIC_PLAN_ID'])
 
-exports.getStripeInvestorPlanId = (env = process.env) =>
-  _.get(env, ['STRIPE_INVESTOR_PLAN_ID'])
+export const getStripeInvestorPlanId = (env = process.env) =>
+  get(env, ['STRIPE_INVESTOR_PLAN_ID'])
 
-exports.getStripeProfessionalPlanId = (env = process.env) =>
-  _.get(env, ['STRIPE_PROFESSIONAL_PLAN_ID'])
+export const getStripeProfessionalPlanId = (env = process.env) =>
+  get(env, ['STRIPE_PROFESSIONAL_PLAN_ID'])
 
-exports.getStripeSecretKey = (env = process.env) =>
-  _.get(env, ['STRIPE_SECRET_KEY'])
+export const getStripeSecretKey = (env = process.env) =>
+  get(env, ['STRIPE_SECRET_KEY'])
 
-exports.isStreamingEnabled = (env = process.env) =>
-  isEnabled(_.get(env, ['FEATURES_STREAMING']))
+export const isStreamingEnabled = (env = process.env) =>
+  isEnabled(get(env, ['FEATURES_STREAMING']))

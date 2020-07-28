@@ -1,22 +1,9 @@
-const _ = require('lodash')
-const utils = require('../utils')
-
-/**
- * How often should the GC on the Job queue in Redis be run
- */
-exports.cleanPeriods = {
-  '1D': 3600 * 24,
-}
-
-/**
- * In what timezone should the cron-scheduler take effect?
- */
-exports.timezone = 'Etc/UTC	'
+import { keymirror } from '../utils'
 
 /**
  * Names of the jobs
  */
-exports.queueNames = utils.keymirror({
+export const queueNames = keymirror({
   calculateDerivedSecurityMetrics: null,
   calculateEEONPerformanceScores: null,
   calculateMacroIndicators: null,

@@ -1,5 +1,15 @@
-const _ = require('lodash')
-const _fp = require('lodash/fp')
+import toUpper from 'lodash/toUpper'
+import toNumber from 'lodash/fp/toNumber'
+import pipe from 'lodash/fp/pipe'
+import lt from 'lodash/fp/lt'
+import isUndefined from 'lodash/isUndefined'
+import isNull from 'lodash/isNull'
+import isFunction from 'lodash/isFunction'
+import isEqual from 'lodash/isEqual'
+import gt from 'lodash/fp/gt'
+import get from 'lodash/get'
+import fIsEqual from 'lodash/fp/isEqual'
+import complement from 'lodash/fp/complement'
 const numbro = require('numbro')
 
 /**
@@ -30,7 +40,7 @@ numbro.setLanguage('en-EEON')
 /**
  * ECharts formatter doesn't support use of external libs so we have our own little formatter
  */
-exports.formatChartNumber = (rawValue) => {
+export const formatChartNumber = (rawValue) => {
   const value = Math.abs(rawValue)
   const ONE_THOUSAND = 1000
   const ONE_MILLION = 1000000
@@ -59,13 +69,13 @@ exports.formatChartNumber = (rawValue) => {
  * Takes a number and formats it nicely into a human-readable string
  * e.g. 38400000000 --> 38.4B
  */
-exports.formatNumberNicely = (value, args = {}) => {
+export const formatNumberNicely = (value, args = {}) => {
   const { currency, percentage, ...rest } = args
 
   if (
-    _.isNull(value) ||
-    _.isUndefined(value) ||
-    !_.isFunction(_.get(value, ['toString']))
+    isNull(value) ||
+    isUndefined(value) ||
+    !isFunction(get(value, ['toString']))
   ) {
     return 'N/A'
   }
@@ -81,32 +91,32 @@ exports.formatNumberNicely = (value, args = {}) => {
   return numbro(value).format(rest)
 }
 
-exports.isEven = (value) => _.isEqual(value % 2, 0)
+export const isEven = (value) => isEqual(value % 2, 0)
 
-exports.isGreaterThanZero = _fp.pipe(_fp.toNumber, _fp.gt(0))
+export const isGreaterThanZero = pipe(toNumber, gt(0))
 
-exports.isLessThanZero = _fp.pipe(_fp.toNumber, _fp.lt(0))
+export const isLessThanZero = pipe(toNumber, lt(0))
 
-exports.isOdd = _fp.complement(exports.isEven)
+export const isOdd = complement(isEven)
 
-exports.isZero = _fp.isEqual(0)
+export const isZero = fIsEqual(0)
 
-exports.prefixValueWithCurrencySymbol = (value) =>
-  exports.formatNumberNicely(value, { currency: true })
+export const prefixValueWithCurrencySymbol = (value) =>
+  formatNumberNicely(value, { currency: true })
 
-exports.suffixValueWithPercentSymbol = (value) =>
-  exports.formatNumberNicely(value, { percentage: true })
+export const suffixValueWithPercentSymbol = (value) =>
+  formatNumberNicely(value, { percentage: true })
 
 /**
  * Takes a string and unformats it into a raw number
  * e.g. 38B --> 38000000000
  */
-exports.unformatNiceNumber = (value = '', { unformatter } = {}) => {
-  if (_.isFunction(unformatter)) {
+export const unformatNiceNumber = (value = '', { unformatter } = {}) => {
+  if (isFunction(unformatter)) {
     return unformatter(value)
   }
 
-  const uppercased = _.toUpper(value)
+  const uppercased = toUpper(value)
 
   // We have to do this because of the Byte formatter in Numbro
   const isBillions = uppercased.includes('B')

@@ -1,18 +1,18 @@
-const _ = require('lodash')
 const utils = require('../utils')
+import { keymirrorLower, keymirrorUpper } from '../utils'
 
-exports.announceTimes = utils.keymirrorUpper({
+export const announceTimes = keymirrorUpper({
   AMC: null,
   BTO: null,
   OTHER: null,
 })
 
-exports.periods = utils.keymirrorLower({
+export const periods = keymirrorLower({
   ANNUAL: null,
   QUARTERLY: null,
 })
 
-exports.securityTypes = utils.keymirrorLower({
+export const securityTypes = keymirrorLower({
   AD: null, // ADR
   RE: null, // REIT
   CE: null, // Closed end fund
@@ -26,7 +26,7 @@ exports.securityTypes = utils.keymirrorLower({
   PS: null, // Preferred Stock
 })
 
-exports.timeframes = {
+export const timeframes = {
   FIVE_DAYS: '5d',
   FIVE_YEARS: '5y',
   ONE_MONTH: '1m',
@@ -36,7 +36,7 @@ exports.timeframes = {
   TWO_YEARS: '2y',
 }
 
-exports.timeRanges = {
+export const timeRanges = {
   FIVE_DAYS: '5d',
   FIVE_YEARS: '5y',
   ONE_MONTH: '1m',
@@ -47,4 +47,4 @@ exports.timeRanges = {
   YTD: 'ytd',
 }
 
-exports.LIVE = 'live'
+export const LIVE = 'live'
