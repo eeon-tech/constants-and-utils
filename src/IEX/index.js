@@ -1,5 +1,4 @@
-const utils = require('../utils')
-import { keymirrorLower, keymirrorUpper } from '../utils'
+import { keymirrorLower, keymirrorUpper } from '../_private'
 
 export const announceTimes = keymirrorUpper({
   AMC: null,

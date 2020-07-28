@@ -1,7 +1,6 @@
-const environment = require('../environment')
-const utils = require('../utils')
+import { keymirrorLower, keymirrorUpper } from '../_private'
 
-exports.stripeCardStatuses = utils.keymirrorLower({
+export const stripeCardStatuses = keymirrorLower({
   CANCELED: null,
   CHARGEABLE: null,
   CONSUMED: null,
@@ -9,18 +8,18 @@ exports.stripeCardStatuses = utils.keymirrorLower({
   PENDING: null,
 })
 
-exports.stripeCouponDurations = utils.keymirrorLower({
+export const stripeCouponDurations = keymirrorLower({
   FOREVER: null,
   ONCE: null,
   REPEATING: null,
 })
 
-exports.stripePlans = utils.keymirrorUpper({
+export const stripePlans = keymirrorUpper({
   BASIC: null,
   INVESTOR: null,
 })
 
-exports.stripeSubscriptionStatuses = utils.keymirrorLower({
+export const stripeSubscriptionStatuses = keymirrorLower({
   ACTIVE: null,
   CANCELED: null,
   INCOMPLETED_EXPIRED: null,

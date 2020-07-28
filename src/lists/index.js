@@ -5,10 +5,9 @@ import isEqual from 'lodash/isEqual'
 import flatten from 'lodash/flatten'
 import values from 'lodash/values'
 import multiply from 'lodash/multiply'
-import _fp from 'lodash/fp'
 import pipe from 'lodash/fp/pipe'
 import toNumber from 'lodash/fp/toNumber'
-import subscriptionPlans from '../subscriptionPlans'
+import { stripePlans } from '../subscriptionPlans'
 import { formatNumberNicely } from '../formatNumbers'
 import {
   betaValueBuckets,
@@ -37,7 +36,7 @@ import {
  * Subscription plans
  * ====================
  */
-const { BASIC, INVESTOR } = subscriptionPlans.stripePlans
+const { BASIC, INVESTOR } = stripePlans
 
 /**
  * ====================
@@ -88,7 +87,7 @@ export const ratioTransform = (value = 0) =>
 export const volumeTransform = (value = 0) =>
   formatNumberNicely(value, { average: true, totalLength: 4 })
 
-export const EEONPerformanceScoreUnformatter = pipe(_toNumber, (number) =>
+export const EEONPerformanceScoreUnformatter = pipe(toNumber, (number) =>
   divide(number, 100)
 )
 

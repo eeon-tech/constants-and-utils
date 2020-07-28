@@ -1,6 +1,6 @@
-const utils = require('../utils')
+import { keymirrorUpper } from '../_private'
 
-exports.sortOrders = utils.keymirrorUpper({
+export const sortOrders = keymirrorUpper({
   ASC: null,
   DESC: null,
 })

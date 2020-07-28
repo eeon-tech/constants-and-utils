@@ -1,4 +1,4 @@
-exports.scoreKeys = {
+export const scoreKeys = {
   COMPUTED_COMPOSITE_SCORE: 'computedCompositeScore',
   COMPUTED_GROWTH_SCORE: 'computedGrowthScore',
   COMPUTED_MOMENTUM_SCORE: 'computedMomentumScore',

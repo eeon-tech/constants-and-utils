@@ -1,6 +1,6 @@
-const utils = require('../utils')
+import { keymirrorUpper } from '../_private'
 
-exports.equalityPredicates = utils.keymirrorUpper({
+export const equalityPredicates = keymirrorUpper({
   GREATER_THAN: null,
   LESS_THAN: null,
 })

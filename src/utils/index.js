@@ -1,44 +1,50 @@
-const _ = require('lodash')
-const _fp = require('lodash/fp')
-const keymirror = require('keymirror')
+import get from 'lodash/get'
+import isArray from 'lodash/isArray'
+import isEqual from 'lodash/isEqual'
+import toLower from 'lodash/toLower'
+import toUpper from 'lodash/toUpper'
+import mapValues from 'lodash/fp/mapValues'
+import every from 'lodash/fp/every'
+import map from 'lodash/fp/map'
+import fget from 'lodash/fp/get'
+import pipe from 'lodash/fp/pipe'
+import keymirror from 'keymirror'
 
-const convertValuesToLower = _fp.mapValues(_.toLower)
+const convertValuesToLower = mapValues(toLower)
 
-const convertValuesToUpper = _fp.mapValues(_.toUpper)
+const convertValuesToUpper = mapValues(toUpper)
 
-exports.eachIsTuple = (list = []) => {
-  if (!_.isArray(list)) {
+export const eachIsTuple = (list = []) => {
+  if (!isArray(list)) {
     throw new Error('Input is not iterable')
   }
-  return _fp.every((item) => _.isArray(item) && _.isEqual(item.length, 2))(list)
+  return every((item) => isArray(item) && isEqual(item.length, 2))(list)
 }
 
-exports.extractFieldFromList = (field) => _fp.map(_fp.get(field))
+export const extractFieldFromList = (field) => map(fget(field))
 
-exports.extractIdsFromList = exports.extractFieldFromList('id')
+export const extractIdsFromList = extractFieldFromList('id')
 
-exports.extractSymbolsFromList = exports.extractFieldFromList('symbol')
+export const extractSymbolsFromList = extractFieldFromList('symbol')
 
-exports.hasLength = (val = []) => {
-  if (!_.isArray(val) && !_.isString(val)) {
+export const hasLength = (val = []) => {
+  if (!isArray(val) && !isString(val)) {
     throw new Error('Input must be a number or string')
   }
   return val.length > 0
 }
 
-exports.keymirror = keymirror
+export const keymirrorLower = pipe(keymirror, convertValuesToLower)
 
-exports.keymirrorLower = _fp.pipe(keymirror, convertValuesToLower)
+export const keymirrorUpper = pipe(keymirror, convertValuesToUpper)
 
-exports.keymirrorUpper = _fp.pipe(keymirror, convertValuesToUpper)
-
-exports.pickWithInitialState = (data = {}, valuesToRetrieve = []) => {
-  if (!_.isArray(valuesToRetrieve) || !exports.eachIsTuple(valuesToRetrieve)) {
+export const pickWithInitialState = (data = {}, valuesToRetrieve = []) => {
+  if (!isArray(valuesToRetrieve) || !eachIsTuple(valuesToRetrieve)) {
     throw new Error('Selector must be a list of tuples')
   }
   return valuesToRetrieve.reduce((acc, valueToRetrieve) => {
     const [key, initialState] = valueToRetrieve
-    acc[key] = _.get(data, key, initialState)
+    acc[key] = get(data, key, initialState)
     return acc
   }, {})
 }

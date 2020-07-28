@@ -1,6 +1,6 @@
-const utils = require('../utils')
+import { keymirrorUpper } from '../_private'
 
-exports.capabilities = utils.keymirrorUpper({
+export const capabilities = keymirrorUpper({
   LISTS: null,
   PEOPLE: null,
   SECURITIES: null,

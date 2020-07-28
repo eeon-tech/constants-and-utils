@@ -1,4 +1,4 @@
-import { keymirror } from '../utils'
+import keymirror from 'keymirror'
 
 /**
  * Names of the jobs

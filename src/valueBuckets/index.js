@@ -3,10 +3,12 @@
  * These are solely values, predicates are separate and can be applied to a bucket
  */
 import _ from 'lodash'
-import * as formatNumbers from '../formatNumbers'
+import toString from 'lodash/toString'
+import multiply from 'lodash/multiply'
+import { formatNumberNicely } from '../formatNumbers'
 
 export const createPercentageValueBucket = (value, label) => ({
-  formattedValue: formatNumbers.formatNumberNicely(value, {
+  formattedValue: formatNumberNicely(value, {
     percentage: true,
     mantissa: 2,
   }),
@@ -15,7 +17,7 @@ export const createPercentageValueBucket = (value, label) => ({
 })
 
 export const createEEONPerformanceScoreValueBucket = (value, label) => ({
-  formattedValue: _.toString(_.multiply(value, 100)),
+  formattedValue: toString(multiply(value, 100)),
   label,
   value,
 })
@@ -25,7 +27,7 @@ export const createNumericValueBucket = (
   label,
   priceValueBucketsOverrides = {}
 ) => ({
-  formattedValue: formatNumbers.formatNumberNicely(value, {
+  formattedValue: formatNumberNicely(value, {
     average: true,
     ...priceValueBucketsOverrides,
   }),
