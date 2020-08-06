@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.2...v1.29.0) (2020-08-06)
+
+
+### Features
+
+* **lists:** adds new list metrics ([ccdedac](https://github.com/eeon-tech/constants-and-utils/commit/ccdedac1be518b96d278745f3dfda7ee8903efdd))
+
 ## [1.28.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.1...v1.28.2) (2020-07-28)
 
 
