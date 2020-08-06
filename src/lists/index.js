@@ -156,6 +156,16 @@ export const changePercent = {
   transform: percentageTransform,
 }
 
+export const close = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'close',
+  label: 'Close',
+  requiresPlan: [BASIC, INVESTOR],
+  shortLabel: 'Close',
+  transform: currencyTransform,
+}
+
 export const currentDebt = {
   valueBuckets: marketCapValueBuckets,
   databaseModelName: metricRelations.ADVANCED_STATS,
@@ -443,6 +453,19 @@ export const grossProfit = {
 }
 
 /**
+ * High
+ */
+export const high = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'high',
+  label: 'High',
+  requiresPlan: [BASIC, INVESTOR],
+  shortLabel: 'High',
+  transform: currencyTransform,
+}
+
+/**
  * Latest Price
  */
 export const latestPrice = {
@@ -452,6 +475,19 @@ export const latestPrice = {
   label: 'Price',
   requiresPlan: [BASIC, INVESTOR],
   shortLabel: 'Price',
+  transform: currencyTransform,
+}
+
+/**
+ * Low
+ */
+export const low = {
+  valueBuckets: priceValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'low',
+  label: 'Low',
+  requiresPlan: [BASIC, INVESTOR],
+  shortLabel: 'Low',
   transform: currencyTransform,
 }
 
