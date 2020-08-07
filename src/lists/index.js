@@ -596,6 +596,19 @@ export const previousClose = {
 }
 
 /**
+ * Previous Volume
+ */
+export const previousVolume = {
+  valueBuckets: volumeValueBuckets,
+  databaseModelName: metricRelations.QUOTE,
+  id: 'previousVolume',
+  label: 'Previous Volume',
+  requiresPlan: [BASIC, INVESTOR],
+  shortLabel: 'Prev. Volume',
+  transform: volumeTransform,
+}
+
+/**
  * Price to Book
  */
 export const priceToBook = {
