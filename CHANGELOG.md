@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.0...v1.29.1) (2020-08-07)
+
+
+### Bug Fixes
+
+* **lists:** adds previous volume ([f660d4e](https://github.com/eeon-tech/constants-and-utils/commit/f660d4e1373c848b8b2b007258649197c6b3b233))
+
 # [1.29.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.28.2...v1.29.0) (2020-08-06)
 
 
