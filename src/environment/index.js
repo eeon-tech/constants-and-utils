@@ -1,11 +1,11 @@
 import get from 'lodash/get'
-import isEqual from 'lodash/fp/isEqual'
+import isEqual from 'lodash/isEqual'
+import fIsEqual from 'lodash/fp/isEqual'
 
-const isEnabled = isEqual('enabled')
-const isSandbox = isEqual('sandbox')
+const isEnabled = fIsEqual('enabled')
 
-const isIEXSandbox = (env = process.env) =>
-  isSandbox('sandbox', get(env, 'IEX_ENVIRONMENT'), true)
+export const isIEXSandbox = (env = process.env) =>
+  isEqual('sandbox', get(env, 'IEX_ENVIRONMENT'), false)
 
 export const getArenaPassword = (env = process.env) =>
   get(env, ['ARENA_PASSWORD'])
