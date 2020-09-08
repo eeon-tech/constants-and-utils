@@ -1,3 +1,10 @@
+## [1.29.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.1...v1.29.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* **iex-env:** fixes IEX environment checking for sandbox ([06c1da8](https://github.com/eeon-tech/constants-and-utils/commit/06c1da82303a91461f22ac938b975f8e051e1da9))
+
 ## [1.29.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.0...v1.29.1) (2020-08-07)
 
 
