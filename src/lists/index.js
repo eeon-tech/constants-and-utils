@@ -247,7 +247,7 @@ export const debtToEquity = {
   id: 'debtToEquity',
   label: 'Debt to Equity',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Debt/Equity',
+  shortLabel: 'Debt / Equity',
   transform: ratioTransform,
 }
 
@@ -669,7 +669,7 @@ export const revenuePerEmployee = {
   id: 'revenuePerEmployee',
   label: 'Revenue per Employee',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Revenue/Employee',
+  shortLabel: 'Revenue / Employee',
   transform: averageCurrencyTransform,
 }
 
@@ -682,7 +682,7 @@ export const revenuePerShare = {
   id: 'revenuePerShare',
   label: 'Revenue per Share',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Revenue/Share',
+  shortLabel: 'Revenue / Share',
   transform: currencyTransform,
 }
 
