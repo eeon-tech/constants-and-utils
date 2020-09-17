@@ -1,3 +1,15 @@
+# [1.30.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.2...v1.30.0) (2020-09-17)
+
+
+### Bug Fixes
+
+* **lists:** fixes short labels with slashes ([714a0d3](https://github.com/eeon-tech/constants-and-utils/commit/714a0d3dc3e772bfff62b69af79d58bea9df064e))
+
+
+### Features
+
+* **build:** adds build artifact ([5bdde9b](https://github.com/eeon-tech/constants-and-utils/commit/5bdde9ba86c3e289b398945c9af8db97449be842))
+
 ## [1.29.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.1...v1.29.2) (2020-09-08)
 
 
