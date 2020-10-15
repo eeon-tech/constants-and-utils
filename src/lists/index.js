@@ -150,9 +150,9 @@ export const changePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.QUOTE,
   id: 'changePercent',
-  label: 'Percent Change',
+  label: '1-day Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '% Change',
+  shortLabel: '1D %',
   transform: percentageTransform,
 }
 
@@ -196,9 +196,9 @@ export const day30ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day30ChangePercent',
-  label: '30 Day Percent Change',
+  label: '30-day Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '30D % Change',
+  shortLabel: '30D %',
   transform: percentageTransform,
 }
 
@@ -209,9 +209,9 @@ export const day5ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'day5ChangePercent',
-  label: '5 Day Percent Change',
+  label: '5-day Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '5D % Change',
+  shortLabel: '5D %',
   transform: percentageTransform,
 }
 
@@ -396,7 +396,7 @@ export const enterpriseValue = {
   id: 'enterpriseValue',
   label: 'Enterprise Value',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Enterprise Value',
+  shortLabel: 'Ent. Value',
   transform: averageCurrencyTransform,
 }
 
@@ -409,7 +409,7 @@ export const enterpriseValueToRevenue = {
   id: 'enterpriseValueToRevenue',
   label: 'Enterprise Value to Revenue',
   requiresPlan: [INVESTOR],
-  shortLabel: 'Ent. Value to Rev.',
+  shortLabel: 'EV/Rev',
   transform: ratioTransform,
 }
 
@@ -420,9 +420,9 @@ export const extendedChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.QUOTE,
   id: 'extendedChangePercet',
-  label: 'After Hours Percent Change',
+  label: 'After-hours Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: 'After Hours % Percent',
+  shortLabel: 'After-hours %',
   transform: percentageTransform,
 }
 
@@ -511,9 +511,9 @@ export const month1ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month1ChangePercent',
-  label: '1M Percent Change',
+  label: '1-month Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '1M % Change',
+  shortLabel: '1M %',
   transform: percentageTransform,
 }
 
@@ -524,9 +524,9 @@ export const month3ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month3ChangePercent',
-  label: '3M Percent Change',
+  label: '3-month Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '3M % Change',
+  shortLabel: '3M %',
   transform: percentageTransform,
 }
 
@@ -537,9 +537,9 @@ export const month6ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'month6ChangePercent',
-  label: '6M Percent Change',
+  label: '6-month Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '6M % Change',
+  shortLabel: '6M %',
   transform: percentageTransform,
 }
 
@@ -705,7 +705,7 @@ export const sharesOutstanding = {
 export const ttmEPS = {
   valueBuckets: ttmEPSValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
-  id: 'ttmTPS',
+  id: 'ttmEPS',
   label: 'EPS (TTM)',
   requiresPlan: [INVESTOR],
   shortLabel: 'EPS (TTM)',
@@ -784,9 +784,9 @@ export const week52change = {
   valueBuckets: priceValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'week52change',
-  label: '52 Week % Change',
+  label: '52-week Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '52W % Change',
+  shortLabel: '52W %',
   transform: percentageTransform,
 }
 
@@ -823,9 +823,9 @@ export const year1ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year1ChangePercent',
-  label: '1Y Percent Change',
+  label: '1-year Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '1Y % Change',
+  shortLabel: '1Y %',
   transform: percentageTransform,
 }
 
@@ -836,9 +836,9 @@ export const year2ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year2ChangePercent',
-  label: '2Y Percent Change',
+  label: '2-year Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '2Y % Change',
+  shortLabel: '2Y %',
   transform: percentageTransform,
 }
 
@@ -849,9 +849,9 @@ export const year5ChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'year5ChangePercent',
-  label: '5Y Percent Change',
+  label: '5-year Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: '5Y % Change',
+  shortLabel: '5Y %',
   transform: percentageTransform,
 }
 
@@ -862,9 +862,9 @@ export const ytdChangePercent = {
   valueBuckets: percentageValueBuckets,
   databaseModelName: metricRelations.KEY_STATS,
   id: 'ytdChangePercent',
-  label: 'YTD Percent Change',
+  label: 'YTD Return',
   requiresPlan: [BASIC, INVESTOR],
-  shortLabel: 'YTD % Change',
+  shortLabel: 'YTD %',
   transform: percentageTransform,
 }
 
