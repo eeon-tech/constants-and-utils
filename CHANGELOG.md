@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/eeon-tech/constants-and-utils/compare/v1.30.1...v1.30.2) (2020-10-15)
+
+
+### Bug Fixes
+
+* **lists:** changes 52w labels ([0cc98bd](https://github.com/eeon-tech/constants-and-utils/commit/0cc98bd3da3abda777c1459209d37c73d6ecd200))
+
 ## [1.30.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.30.0...v1.30.1) (2020-10-15)
 
 
