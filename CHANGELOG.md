@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/eeon-tech/constants-and-utils/compare/v1.30.0...v1.30.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* **lists:** changes list values and labels ([292021a](https://github.com/eeon-tech/constants-and-utils/commit/292021a2e3a3229ff2df06f356dee64c900cb0ea))
+
 # [1.30.0](https://github.com/eeon-tech/constants-and-utils/compare/v1.29.2...v1.30.0) (2020-09-17)
 
 
